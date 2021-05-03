@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd</arg>&quot; line <arg fmt="%d" index="2">54</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">COUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">RCA</arg>&apos;.
+</msg>
+
 </messages>
 

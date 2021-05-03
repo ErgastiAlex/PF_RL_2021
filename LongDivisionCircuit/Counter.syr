@@ -1,0 +1,410 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: Counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Counter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Counter"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : Counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd" in Library work.
+Architecture rtl of Entity ff_d is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FA.vhd" in Library work.
+Architecture rtl of Entity fa is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd" in Library work.
+Architecture gl of Entity rca is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd" in Library work.
+Architecture gl of Entity reg_pp is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" in Library work.
+Architecture gl of Entity counter is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <Reg_PP> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <Counter> in library <work> (Architecture <gl>).
+	n = 5
+WARNING:Xst:753 - "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" line 54: Unconnected output port 'COUT' of component 'RCA'.
+Entity <Counter> analyzed. Unit <Counter> generated.
+
+Analyzing generic Entity <RCA> in library <work> (Architecture <gl>).
+	n = 5
+Entity <RCA> analyzed. Unit <RCA> generated.
+
+Analyzing Entity <FA> in library <work> (Architecture <rtl>).
+Entity <FA> analyzed. Unit <FA> generated.
+
+Analyzing generic Entity <Reg_PP> in library <work> (Architecture <gl>).
+	n = 5
+Entity <Reg_PP> analyzed. Unit <Reg_PP> generated.
+
+Analyzing Entity <FF_D> in library <work> (Architecture <rtl>).
+Entity <FF_D> analyzed. Unit <FF_D> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FA>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FA.vhd".
+    Found 1-bit xor3 for signal <S>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <FA> synthesized.
+
+
+Synthesizing Unit <FF_D>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FF_D> synthesized.
+
+
+Synthesizing Unit <RCA>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd".
+Unit <RCA> synthesized.
+
+
+Synthesizing Unit <Reg_PP>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd".
+Unit <Reg_PP> synthesized.
+
+
+Synthesizing Unit <Counter>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd".
+Unit <Counter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Xors                                                 : 5
+ 1-bit xor3                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Xors                                                 : 5
+ 1-bit xor3                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Counter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Counter.ngr
+Top Level Output File Name         : Counter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 6
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 1
+# FlipFlops/Latches                : 5
+#      FDRE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 2
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                        3  out of   1920     0%  
+ Number of Slice Flip Flops:              5  out of   3840     0%  
+ Number of 4 input LUTs:                  6  out of   3840     0%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    141     5%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 2.993ns (Maximum Frequency: 334.063MHz)
+   Minimum input arrival time before clock: 2.390ns
+   Maximum output required time after clock: 6.388ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.993ns (frequency: 334.063MHz)
+  Total number of paths / destination ports: 15 / 5
+-------------------------------------------------------------------------
+Delay:               2.993ns (Levels of Logic = 2)
+  Source:            reg/reg_gen[2].ffd/Q (FF)
+  Destination:       reg/reg_gen[4].ffd/Q (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: reg/reg_gen[2].ffd/Q to reg/reg_gen[4].ffd/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.626   1.074  reg/reg_gen[2].ffd/Q (reg/reg_gen[2].ffd/Q)
+     LUT3_L:I0->LO         1   0.479   0.159  adder/rca[2].fa_i/COUT_and00011 (adder/C_INTERNAL<3>)
+     LUT3:I2->O            1   0.479   0.000  adder/rca[4].fa_i/Mxor_S_xo<0>1 (RCA_RESULT<4>)
+     FDRE:D                    0.176          reg/reg_gen[4].ffd/Q
+    ----------------------------------------
+    Total                      2.993ns (1.760ns logic, 1.233ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              2.390ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       reg/reg_gen[0].ffd/Q (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RESET to reg/reg_gen[0].ffd/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   0.783  RESET_IBUF (RESET_IBUF)
+     FDRE:R                    0.892          reg/reg_gen[4].ffd/Q
+    ----------------------------------------
+    Total                      2.390ns (1.607ns logic, 0.783ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              6.388ns (Levels of Logic = 1)
+  Source:            reg/reg_gen[0].ffd/Q (FF)
+  Destination:       RESULT<0> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: reg/reg_gen[0].ffd/Q to RESULT<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.626   0.853  reg/reg_gen[0].ffd/Q (reg/reg_gen[0].ffd/Q)
+     OBUF:I->O                 4.909          RESULT_0_OBUF (RESULT<0>)
+    ----------------------------------------
+    Total                      6.388ns (5.535ns logic, 0.853ns route)
+                                       (86.7% logic, 13.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.74 secs
+ 
+--> 
+
+Total memory usage is 4513188 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

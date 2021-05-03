@@ -1,2 +1,5 @@
+work	"Counter.vhd"
 work	"FA.vhd"
+work	"FF_D.vhd"
 work	"RCA.vhd"
+work	"Reg_PP.vhd"
