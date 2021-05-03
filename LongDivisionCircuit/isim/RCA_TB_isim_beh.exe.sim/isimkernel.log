@@ -1,0 +1,29 @@
+Command line:
+   RCA_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57870
+
+Mon May 03 16:00:54 2021
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.22 Meg
+
+ Total Signals          : 171
+ Total Nets             : 131
+ Total Signal Drivers   : 68
+ Total Blocks           : 67
+ Total Primitive Blocks : 33
+ Total Processes        : 67
+ Total Traceable Variables  : 41
+ Total Scalar Nets and Variables : 524
+Total Line Count : 70
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5150.22 Meg
+
+Mon May 03 16:00:59 2021
+

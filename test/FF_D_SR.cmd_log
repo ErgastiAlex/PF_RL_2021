@@ -1,5 +1,0 @@
-xst -intstyle ise -ifn "D:/Alex/test/FF_D_SR.xst" -ofn "D:/Alex/test/FF_D_SR.syr" 
-netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FF_D_SR.ngc FF_D_SR_synthesis.v 
-xst -intstyle ise -ifn "D:/Alex/test/FF_D_SR.xst" -ofn "D:/Alex/test/FF_D_SR.syr" 
-netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim FF_D_SR.ngc FF_D_SR_synthesis.v 
-xst -intstyle ise -ifn "D:/Alex/test/FF_D_SR.xst" -ofn "D:/Alex/test/FF_D_SR.syr" 

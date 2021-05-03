@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.syr" 
+netgen -intstyle ise -ar Structure -tm FF_D -w -dir netgen/synthesis -ofmt vhdl -sim FF_D.ngc FF_D_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 FF_D.ngc FF_D.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o FF_D_map.ncd FF_D.ngd FF_D.pcf 
+par -w -intstyle ise -ol high -t 1 FF_D_map.ncd FF_D.ncd FF_D.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FF_D.twx FF_D.ncd -o FF_D.twr FF_D.pcf 

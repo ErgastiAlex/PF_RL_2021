@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Alex/Documents/PF_RL_2021/Other/test/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Alex/Documents/PF_RL_2021/Other/test/xst"
+elaborate
+-ifn FF_D_SR.prj
+-ifmt mixed

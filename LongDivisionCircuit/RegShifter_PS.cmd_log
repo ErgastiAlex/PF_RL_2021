@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS.syr" 
+netgen -intstyle ise -ar Structure -tm RegShifter_PS -w -dir netgen/synthesis -ofmt vhdl -sim RegShifter_PS.ngc RegShifter_PS_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 RegShifter_PS.ngc RegShifter_PS.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o RegShifter_PS_map.ncd RegShifter_PS.ngd RegShifter_PS.pcf 
+par -w -intstyle ise -ol high -t 1 RegShifter_PS_map.ncd RegShifter_PS.ncd RegShifter_PS.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml RegShifter_PS.twx RegShifter_PS.ncd -o RegShifter_PS.twr RegShifter_PS.pcf 

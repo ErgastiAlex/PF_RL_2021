@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.syr" 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.syr" 
+netgen -intstyle ise -ar Structure -tm FF_D_2Input -w -dir netgen/synthesis -ofmt vhdl -sim FF_D_2Input.ngc FF_D_2Input_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 FF_D_2Input.ngc FF_D_2Input.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o FF_D_2Input_map.ncd FF_D_2Input.ngd FF_D_2Input.pcf 
+par -w -intstyle ise -ol high -t 1 FF_D_2Input_map.ncd FF_D_2Input.ncd FF_D_2Input.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FF_D_2Input.twx FF_D_2Input.ncd -o FF_D_2Input.twr FF_D_2Input.pcf 

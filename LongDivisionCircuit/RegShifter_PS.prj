@@ -1,0 +1,4 @@
+vhdl work "MUX.vhd"
+vhdl work "FF_D.vhd"
+vhdl work "FF_D_2Input.vhd"
+vhdl work "RegShifter_PS.vhd"

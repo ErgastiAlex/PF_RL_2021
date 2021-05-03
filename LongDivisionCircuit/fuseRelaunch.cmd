@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA_TB_isim_par.exe" -prj "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA_TB_par.prj" "work.RCA_TB" 

@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.syr" 
+netgen -intstyle ise -ar Structure -tm Reg_PP -w -dir netgen/synthesis -ofmt vhdl -sim Reg_PP.ngc Reg_PP_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Reg_PP.ngc Reg_PP.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o Reg_PP_map.ncd Reg_PP.ngd Reg_PP.pcf 
+par -w -intstyle ise -ol high -t 1 Reg_PP_map.ncd Reg_PP.ncd Reg_PP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Reg_PP.twx Reg_PP.ncd -o Reg_PP.twr Reg_PP.pcf 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Reg_PP.ngc Reg_PP.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o Reg_PP_map.ncd Reg_PP.ngd Reg_PP.pcf 
+par -w -intstyle ise -ol high -t 1 Reg_PP_map.ncd Reg_PP.ncd Reg_PP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Reg_PP.twx Reg_PP.ncd -o Reg_PP.twr Reg_PP.pcf 
+netgen -intstyle ise -s 5  -pcf Reg_PP.pcf -rpw 100 -tpw 0 -ar Structure -tm Reg_PP -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim Reg_PP.ncd Reg_PP_timesim.vhd 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Reg_PP.ngc Reg_PP.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o Reg_PP_map.ncd Reg_PP.ngd Reg_PP.pcf 
+par -w -intstyle ise -ol high -t 1 Reg_PP_map.ncd Reg_PP.ncd Reg_PP.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Reg_PP.twx Reg_PP.ncd -o Reg_PP.twr Reg_PP.pcf 
+netgen -intstyle ise -s 5  -pcf Reg_PP.pcf -rpw 100 -tpw 0 -ar Structure -tm Reg_PP -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim Reg_PP.ncd Reg_PP_timesim.vhd 

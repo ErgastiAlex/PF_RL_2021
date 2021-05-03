@@ -1,0 +1,31 @@
+Command line:
+   RCA_TB_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/RCA_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  57875
+
+Mon May 03 16:01:53 2021
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5163.1 Meg
+
+ Total Signals          : 1621
+ Total Nets             : 962
+ Total Signal Drivers   : 876
+ Total Blocks           : 593
+ Total Primitive Blocks : 300
+ Total Processes        : 875
+ Total Traceable Variables  : 2411
+ Total Scalar Nets and Variables : 13086
+Total Line Count : 3833
+
+ Total Simulation Time: 0.1875 sec
+
+ Current Memory Usage: 5163.1 Meg
+
+Mon May 03 16:02:15 2021
+
