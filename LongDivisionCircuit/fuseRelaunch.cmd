@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_isim_beh.exe" -prj "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_beh.prj" "work.CU_TB" 
+-intstyle "ise" -incremental -o "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB_isim_beh.exe" -prj "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB_beh.prj" "work.RegShifter_PS_TB" 

@@ -52,7 +52,7 @@ static void work_a_1710397419_1516540902_p_0(char *t0)
 LAB0:    xsi_set_current_line(39, ng0);
     t1 = (t0 + 1352U);
     t2 = *((char **)t1);
-    t1 = (t0 + 9231);
+    t1 = (t0 + 9227);
     t4 = 1;
     if (32U == 32U)
         goto LAB5;
@@ -126,7 +126,7 @@ static void work_a_1710397419_1516540902_p_1(char *t0)
 LAB0:    xsi_set_current_line(42, ng0);
     t1 = (t0 + 2472U);
     t2 = *((char **)t1);
-    t1 = (t0 + 9263);
+    t1 = (t0 + 9259);
     t4 = 1;
     if (5U == 5U)
         goto LAB5;

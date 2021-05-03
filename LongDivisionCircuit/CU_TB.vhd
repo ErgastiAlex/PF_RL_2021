@@ -13,7 +13,7 @@ ARCHITECTURE behavior OF CU_TB IS
     PORT(
          CLK : IN  std_logic;
          LOAD : IN  std_logic;
-         DIVIDEND : IN  std_logic_vector(31 downto 0);
+         DIVISOR : IN  std_logic_vector(31 downto 0);
          CARRY : IN  std_logic;
          LD_SH : OUT  std_logic;
          EN : OUT  std_logic;
@@ -26,7 +26,7 @@ ARCHITECTURE behavior OF CU_TB IS
    --Inputs
    signal CLK : std_logic := '0';
    signal LOAD : std_logic := '0';
-   signal DIVIDEND : std_logic_vector(31 downto 0) := (others => '0');
+   signal DIVISOR : std_logic_vector(31 downto 0) := (others => '0');
    signal CARRY : std_logic := '0';
 
  	--Outputs
@@ -44,7 +44,7 @@ BEGIN
    uut: CU PORT MAP (
           CLK => CLK,
           LOAD => LOAD,
-          DIVIDEND => DIVIDEND,
+          DIVISOR => DIVISOR,
           CARRY => CARRY,
           LD_SH => LD_SH,
           EN => EN,
@@ -83,7 +83,7 @@ BEGIN
 		
 		-- check if ERROR become 0 and EN =0 and then be resetted with LOAD=1
 		wait for CLK_period*2;
-		DIVIDEND<=(others=>'1');
+		DIVISOR<=(others=>'1');
 		wait for CLK_period*2;
 		LOAD<='1';
 		wait for CLK_period;

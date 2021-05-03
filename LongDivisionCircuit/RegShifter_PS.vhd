@@ -24,8 +24,8 @@ end RegShifter_PS;
 architecture GL of RegShifter_PS is
 	component FF_D_2Input is
 		port(
-			A:		in 	std_logic;
-			B:		in		std_logic;
+			X1:		in 	std_logic;
+			X0:		in		std_logic;
 		
 			S:		in		std_logic;
 		
@@ -42,8 +42,8 @@ architecture GL of RegShifter_PS is
 begin
 	ff0: FF_D_2Input
 		  port map(
-			A=>PI(0),
-			B=>SI,
+			X1=>PI(0),
+			X0=>SI,
 			S=>LD_SH,
 			Q=>PO_INTERNAL(0),
 			CLK=>CLK,
@@ -54,8 +54,8 @@ begin
 	gen_ff_d:for i in 1 to n-1 generate
 		ffother:FF_D_2Input
 		  port map(
-			A=>PI(i),
-			B=>PO_INTERNAL(i-1),
+			X1=>PI(i),
+			X0=>PO_INTERNAL(i-1),
 			S=>LD_SH,
 			Q=>PO_INTERNAL(i),
 			CLK=>CLK,

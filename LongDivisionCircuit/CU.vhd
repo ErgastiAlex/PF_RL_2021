@@ -6,7 +6,7 @@ entity CU is
 	port(
 		CLK:		in		std_logic;
 		LOAD:		in		std_logic;
-		DIVIDEND:in		std_logic_vector(31 downto 0);
+		DIVISOR:	in		std_logic_vector(31 downto 0);
 		CARRY:	in		std_logic;
 		
 		LD_SH:	out	std_logic;
@@ -36,7 +36,7 @@ architecture RTL of CU is
 	signal INTERNAL_EOC:		std_logic;
 begin
 
-	INTERNAL_ERROR	<=	'1' when DIVIDEND="11111111111111111111111111111111" else
+	INTERNAL_ERROR	<=	'1' when DIVISOR="11111111111111111111111111111111" else
 							'0';
 
 	INTERNAL_EOC	<=	'1' when INTERNAL_RESULT="11111" else

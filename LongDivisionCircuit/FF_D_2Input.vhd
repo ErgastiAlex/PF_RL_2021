@@ -3,8 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity FF_D_2Input is
 	port(
-		A:		in 	std_logic;
-		B:		in		std_logic;
+		X1:		in 	std_logic;
+		X0:		in		std_logic;
 		
 		S:		in		std_logic;
 		
@@ -22,10 +22,10 @@ architecture RTL of FF_D_2Input is
 			n: integer :=1
 		);
 		port(
-			A: in std_logic_vector(n-1 downto 0);
-			B:	in std_logic_vector(n-1 downto 0);
-			S:	in std_logic;
-			Z:	out std_logic_vector(n-1 downto 0)
+			X1: 	in std_logic_vector(n-1 downto 0);
+			X0:	in std_logic_vector(n-1 downto 0);
+			S:		in std_logic;
+			Z:		out std_logic_vector(n-1 downto 0)
 		);
 	end component;
 	
@@ -44,8 +44,8 @@ begin
 	mux_2:MUX 
 		generic map(n=>1)
 		port map(
-		A(0)=>A,
-		B(0)=>B,
+		X1(0)=>X1,
+		X0(0)=>X0,
 		S=>S,
 		Z(0)=>Z_INTERNAL);
 

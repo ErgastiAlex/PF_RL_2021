@@ -1,29 +1,25 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_isim_beh.exe -prj C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_beh.prj work.CU_TB 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB_isim_beh.exe -prj C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB_beh.prj work.RegShifter_PS_TB 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd" into library work
 Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FA.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture rtl of entity FA [fa_default]
-Compiling architecture gl of entity RCA [\RCA(5)\]
+Compiling architecture rtl of entity MUX [\MUX(1)\]
 Compiling architecture rtl of entity FF_D [ff_d_default]
-Compiling architecture gl of entity Reg_PP [\Reg_PP(5)\]
-Compiling architecture gl of entity Counter [\Counter(5)\]
-Compiling architecture rtl of entity CU [cu_default]
-Compiling architecture behavior of entity cu_tb
+Compiling architecture rtl of entity FF_D_2Input [ff_d_2input_default]
+Compiling architecture gl of entity RegShifter_PS [\RegShifter_PS(32)\]
+Compiling architecture behavior of entity regshifter_ps_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 15 VHDL Units
-Built simulation executable C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_isim_beh.exe
-Fuse Memory Usage: 29660 KB
-Fuse CPU Usage: 358 ms
+Compiled 11 VHDL Units
+Built simulation executable C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS_TB_isim_beh.exe
+Fuse Memory Usage: 30192 KB
+Fuse CPU Usage: 374 ms

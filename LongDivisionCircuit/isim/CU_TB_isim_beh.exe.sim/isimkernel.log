@@ -2,14 +2,14 @@ Command line:
    CU_TB_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  58757
+     -socket  58905
 
-Mon May 03 18:39:39 2021
+Mon May 03 18:55:14 2021
 
 
  Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 5149.65 Meg
+ Current Memory Usage: 5149.64 Meg
 
  Total Signals          : 89
  Total Nets             : 70
@@ -21,9 +21,9 @@ Mon May 03 18:39:39 2021
  Total Scalar Nets and Variables : 444
 Total Line Count : 59
 
- Total Simulation Time: 0.796875 sec
+ Total Simulation Time: 0.109375 sec
 
- Current Memory Usage: 4992.36 Meg
+ Current Memory Usage: 5149.64 Meg
 
-Mon May 03 18:41:36 2021
+Mon May 03 18:55:18 2021
 

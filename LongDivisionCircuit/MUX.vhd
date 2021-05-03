@@ -7,8 +7,8 @@ entity MUX is
 		n: integer :=1
 	);
 	port(
-		A: in std_logic_vector(n-1 downto 0);
-		B:	in std_logic_vector(n-1 downto 0);
+		X0: in std_logic_vector(n-1 downto 0);
+		X1:	in std_logic_vector(n-1 downto 0);
 		
 		S:	in std_logic;
 		
@@ -19,8 +19,8 @@ end MUX;
 architecture RTL of MUX is
 begin
 with S select Z<=	
-			A when '1',
-			B when others;
+			X1 when '1',
+			X0 when others;
 
 
 end RTL;

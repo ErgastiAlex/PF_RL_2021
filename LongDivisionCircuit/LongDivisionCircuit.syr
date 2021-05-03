@@ -1,0 +1,583 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: LongDivisionCircuit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LongDivisionCircuit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LongDivisionCircuit"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : LongDivisionCircuit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd" in Library work.
+Architecture rtl of Entity ff_d is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FA.vhd" in Library work.
+Architecture rtl of Entity fa is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd" in Library work.
+Architecture gl of Entity rca is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd" in Library work.
+Architecture gl of Entity reg_pp is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd" in Library work.
+Architecture rtl of Entity mux is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" in Library work.
+Architecture gl of Entity counter is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.vhd" in Library work.
+Architecture rtl of Entity ff_d_2input is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS.vhd" in Library work.
+Architecture gl of Entity regshifter_ps is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd" in Library work.
+Architecture rtl of Entity cu is up to date.
+Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/LongDivisionCircuit.vhd" in Library work.
+Architecture gl of Entity longdivisioncircuit is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <LongDivisionCircuit> in library <work> (architecture <gl>).
+
+Analyzing hierarchy for entity <Reg_PP> in library <work> (architecture <gl>) with generics.
+	n = 32
+
+Analyzing hierarchy for entity <RegShifter_PS> in library <work> (architecture <gl>) with generics.
+	n = 32
+
+Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
+	n = 32
+
+Analyzing hierarchy for entity <MUX> in library <work> (architecture <rtl>) with generics.
+	n = 32
+
+Analyzing hierarchy for entity <CU> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D_2Input> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <MUX> in library <work> (architecture <rtl>) with generics.
+	n = 1
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <Reg_PP> in library <work> (architecture <gl>) with generics.
+	n = 5
+
+Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <LongDivisionCircuit> in library <work> (Architecture <gl>).
+WARNING:Xst:753 - "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/LongDivisionCircuit.vhd" line 118: Unconnected output port 'SO' of component 'RegShifter_PS'.
+Entity <LongDivisionCircuit> analyzed. Unit <LongDivisionCircuit> generated.
+
+Analyzing generic Entity <Reg_PP.1> in library <work> (Architecture <gl>).
+	n = 32
+Entity <Reg_PP.1> analyzed. Unit <Reg_PP.1> generated.
+
+Analyzing Entity <FF_D> in library <work> (Architecture <rtl>).
+Entity <FF_D> analyzed. Unit <FF_D> generated.
+
+Analyzing generic Entity <RegShifter_PS> in library <work> (Architecture <gl>).
+	n = 32
+Entity <RegShifter_PS> analyzed. Unit <RegShifter_PS> generated.
+
+Analyzing Entity <FF_D_2Input> in library <work> (Architecture <rtl>).
+Entity <FF_D_2Input> analyzed. Unit <FF_D_2Input> generated.
+
+Analyzing generic Entity <MUX.2> in library <work> (Architecture <rtl>).
+	n = 1
+Entity <MUX.2> analyzed. Unit <MUX.2> generated.
+
+Analyzing generic Entity <RCA.1> in library <work> (Architecture <gl>).
+	n = 32
+Entity <RCA.1> analyzed. Unit <RCA.1> generated.
+
+Analyzing Entity <FA> in library <work> (Architecture <rtl>).
+Entity <FA> analyzed. Unit <FA> generated.
+
+Analyzing generic Entity <MUX.1> in library <work> (Architecture <rtl>).
+	n = 32
+Entity <MUX.1> analyzed. Unit <MUX.1> generated.
+
+Analyzing Entity <CU> in library <work> (Architecture <rtl>).
+Entity <CU> analyzed. Unit <CU> generated.
+
+Analyzing generic Entity <Counter> in library <work> (Architecture <gl>).
+	n = 5
+WARNING:Xst:753 - "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" line 54: Unconnected output port 'COUT' of component 'RCA'.
+Entity <Counter> analyzed. Unit <Counter> generated.
+
+Analyzing generic Entity <RCA.2> in library <work> (Architecture <gl>).
+	n = 5
+Entity <RCA.2> analyzed. Unit <RCA.2> generated.
+
+Analyzing generic Entity <Reg_PP.2> in library <work> (Architecture <gl>).
+	n = 5
+Entity <Reg_PP.2> analyzed. Unit <Reg_PP.2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MUX_1>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd".
+Unit <MUX_1> synthesized.
+
+
+Synthesizing Unit <FF_D>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FF_D> synthesized.
+
+
+Synthesizing Unit <MUX_2>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd".
+Unit <MUX_2> synthesized.
+
+
+Synthesizing Unit <FA>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FA.vhd".
+    Found 1-bit xor3 for signal <S>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <FA> synthesized.
+
+
+Synthesizing Unit <Reg_PP_1>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd".
+Unit <Reg_PP_1> synthesized.
+
+
+Synthesizing Unit <RCA_1>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd".
+Unit <RCA_1> synthesized.
+
+
+Synthesizing Unit <FF_D_2Input>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D_2Input.vhd".
+Unit <FF_D_2Input> synthesized.
+
+
+Synthesizing Unit <RCA_2>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RCA.vhd".
+Unit <RCA_2> synthesized.
+
+
+Synthesizing Unit <Reg_PP_2>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Reg_PP.vhd".
+Unit <Reg_PP_2> synthesized.
+
+
+Synthesizing Unit <RegShifter_PS>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/RegShifter_PS.vhd".
+Unit <RegShifter_PS> synthesized.
+
+
+Synthesizing Unit <Counter>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd".
+Unit <Counter> synthesized.
+
+
+Synthesizing Unit <CU>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd".
+Unit <CU> synthesized.
+
+
+Synthesizing Unit <LongDivisionCircuit>.
+    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/LongDivisionCircuit.vhd".
+Unit <LongDivisionCircuit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 101
+ 1-bit register                                        : 101
+# Xors                                                 : 37
+ 1-bit xor3                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 101
+ Flip-Flops                                            : 101
+# Xors                                                 : 37
+ 1-bit xor3                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <LongDivisionCircuit> ...
+
+Optimizing unit <Reg_PP_1> ...
+
+Optimizing unit <RCA_1> ...
+
+Optimizing unit <RegShifter_PS> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LongDivisionCircuit, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 101
+ Flip-Flops                                            : 101
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : LongDivisionCircuit.ngr
+Top Level Output File Name         : LongDivisionCircuit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 132
+
+Cell Usage :
+# BELS                             : 238
+#      GND                         : 1
+#      INV                         : 33
+#      LUT2                        : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 82
+#      LUT3_D                      : 4
+#      LUT3_L                      : 15
+#      LUT4                        : 61
+#      LUT4_D                      : 19
+#      LUT4_L                      : 1
+#      MUXCY                       : 8
+#      MUXF5                       : 10
+#      VCC                         : 1
+# FlipFlops/Latches                : 101
+#      FDRE                        : 101
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 131
+#      IBUF                        : 65
+#      OBUF                        : 66
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                      112  out of   1920     5%  
+ Number of Slice Flip Flops:            101  out of   3840     2%  
+ Number of 4 input LUTs:                218  out of   3840     5%  
+ Number of IOs:                         132
+ Number of bonded IOBs:                 132  out of    141    93%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 101   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.817ns (Maximum Frequency: 92.451MHz)
+   Minimum input arrival time before clock: 6.830ns
+   Maximum output required time after clock: 8.436ns
+   Maximum combinational path delay: 8.921ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 10.817ns (frequency: 92.451MHz)
+  Total number of paths / destination ports: 21847 / 138
+-------------------------------------------------------------------------
+Delay:               10.817ns (Levels of Logic = 7)
+  Source:            DEN_Register_32/reg_gen[1].ffd/Q (FF)
+  Destination:       NUM_ParSerialShifter_32/gen_ff_d[1].ffother/ff/Q (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: DEN_Register_32/reg_gen[1].ffd/Q to NUM_ParSerialShifter_32/gen_ff_d[1].ffother/ff/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.626   1.040  DEN_Register_32/reg_gen[1].ffd/Q (DEN_Register_32/reg_gen[1].ffd/Q)
+     LUT4_D:I0->LO         1   0.479   0.159  Adder/rca[1].fa_i/COUT1 (N217)
+     LUT3:I2->O            3   0.479   0.830  Adder/rca[3].fa_i/Mxor_S_xo<0>11 (Adder/N01)
+     LUT3:I2->O            5   0.479   0.842  Adder/rca[5].fa_i/Mxor_S_xo<0>11 (Adder/N1)
+     LUT3:I2->O           10   0.479   0.964  Adder/rca[9].fa_i/Mxor_S_xo<0>11 (Adder/N3)
+     MUXF5:S->O            9   0.540   1.014  Adder/rca[25].fa_i/Mxor_S_xo<0>11 (Adder/N11)
+     LUT3_D:I2->O         56   0.479   1.751  Adder/rca[31].fa_i/COUT1 (CARRY_INTERNAL)
+     LUT3:I2->O            1   0.479   0.000  REM_ParSerialShifter_32/ff0/mux_2/Z_0_mux00001 (REM_ParSerialShifter_32/ff0/Z_INTERNAL)
+     FDRE:D                    0.176          REM_ParSerialShifter_32/ff0/ff/Q
+    ----------------------------------------
+    Total                     10.817ns (4.216ns logic, 6.601ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 2410 / 202
+-------------------------------------------------------------------------
+Offset:              6.830ns (Levels of Logic = 11)
+  Source:            DIVISOR<8> (PAD)
+  Destination:       control_unit/counter_5/reg/reg_gen[0].ffd/Q (FF)
+  Destination Clock: CLK rising
+
+  Data Path: DIVISOR<8> to control_unit/counter_5/reg/reg_gen[0].ffd/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.715   1.040  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
+     LUT4:I0->O            1   0.479   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           2   0.265   0.804  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
+     LUT3:I2->O           69   0.479   1.755  control_unit/INTERNAL_EN1 (EN_INTERNAL)
+     FDRE:CE                   0.524          control_unit/counter_5/reg/reg_gen[4].ffd/Q
+    ----------------------------------------
+    Total                      6.830ns (3.230ns logic, 3.600ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 69 / 65
+-------------------------------------------------------------------------
+Offset:              8.436ns (Levels of Logic = 3)
+  Source:            control_unit/counter_5/reg/reg_gen[3].ffd/Q (FF)
+  Destination:       EOC (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: control_unit/counter_5/reg/reg_gen[3].ffd/Q to EOC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.626   1.074  control_unit/counter_5/reg/reg_gen[3].ffd/Q (control_unit/counter_5/reg/reg_gen[3].ffd/Q)
+     LUT2_L:I0->LO         1   0.479   0.123  control_unit/INTERNAL_EOC_cmp_eq0000_SW0 (N01)
+     LUT4:I3->O            2   0.479   0.745  control_unit/INTERNAL_EOC_cmp_eq0000 (EOC_OBUF)
+     OBUF:I->O                 4.909          EOC_OBUF (EOC)
+    ----------------------------------------
+    Total                      8.436ns (6.493ns logic, 1.943ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 1
+-------------------------------------------------------------------------
+Delay:               8.921ns (Levels of Logic = 11)
+  Source:            DIVISOR<8> (PAD)
+  Destination:       ERROR (PAD)
+
+  Data Path: DIVISOR<8> to ERROR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.715   1.040  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
+     LUT4:I0->O            1   0.479   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           2   0.265   0.745  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
+     OBUF:I->O                 4.909          ERROR_OBUF (ERROR)
+    ----------------------------------------
+    Total                      8.921ns (7.136ns logic, 1.786ns route)
+                                       (80.0% logic, 20.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.98 secs
+ 
+--> 
+
+Total memory usage is 4513212 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
