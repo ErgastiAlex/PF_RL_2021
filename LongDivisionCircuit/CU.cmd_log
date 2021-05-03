@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.syr" 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.syr" 
+netgen -intstyle ise -ar Structure -tm CU -w -dir netgen/synthesis -ofmt vhdl -sim CU.ngc CU_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.syr" 
+netgen -intstyle ise -ar Structure -tm CU -w -dir netgen/synthesis -ofmt vhdl -sim CU.ngc CU_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 CU.ngc CU.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o CU_map.ncd CU.ngd CU.pcf 
+par -w -intstyle ise -ol high -t 1 CU_map.ncd CU.ncd CU.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml CU.twx CU.ncd -o CU.twr CU.pcf 
+netgen -intstyle ise -s 5  -pcf CU.pcf -rpw 100 -tpw 0 -ar Structure -tm CU -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim CU.ncd CU_timesim.vhd 
+xst -intstyle ise -ifn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.xst" -ofn "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.syr" 
+netgen -intstyle ise -ar Structure -tm CU -w -dir netgen/synthesis -ofmt vhdl -sim CU.ngc CU_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 CU.ngc CU.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o CU_map.ncd CU.ngd CU.pcf 
+par -w -intstyle ise -ol high -t 1 CU_map.ncd CU.ncd CU.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml CU.twx CU.ncd -o CU.twr CU.pcf 
+netgen -intstyle ise -s 5  -pcf CU.pcf -rpw 100 -tpw 0 -ar Structure -tm CU -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim CU.ncd CU_timesim.vhd 

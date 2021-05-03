@@ -1,0 +1,31 @@
+Command line:
+   CU_TB_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/CU_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  58718
+
+Mon May 03 18:32:47 2021
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5154.19 Meg
+
+ Total Signals          : 981
+ Total Nets             : 594
+ Total Signal Drivers   : 536
+ Total Blocks           : 324
+ Total Primitive Blocks : 171
+ Total Processes        : 537
+ Total Traceable Variables  : 1404
+ Total Scalar Nets and Variables : 8568
+Total Line Count : 2137
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 5468.76 Meg
+
+Mon May 03 18:33:28 2021
+

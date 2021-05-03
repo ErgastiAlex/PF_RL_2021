@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/xst"
+elaborate
+-ifn CU.prj
+-ifmt mixed

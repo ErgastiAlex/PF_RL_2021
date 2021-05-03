@@ -1,0 +1,182 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml CU.twx CU.ncd -o CU.twr CU.pcf
+
+Design file:              CU.ncd
+Physical constraint file: CU.pcf
+Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+DIVIDEND<0> |    5.804(R)|   -3.124(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<1> |    5.746(R)|   -3.077(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<2> |    5.966(R)|   -3.253(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<3> |    5.777(R)|   -3.102(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<4> |    6.013(R)|   -3.291(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<5> |    5.596(R)|   -2.958(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<6> |    5.366(R)|   -2.774(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<7> |    5.707(R)|   -3.047(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<8> |    5.782(R)|   -3.107(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<9> |    5.738(R)|   -3.072(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<10>|    5.618(R)|   -2.976(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<11>|    5.579(R)|   -2.944(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<12>|    6.002(R)|   -3.282(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<13>|    5.570(R)|   -2.937(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<14>|    5.488(R)|   -2.871(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<15>|    5.653(R)|   -3.003(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<16>|    4.896(R)|   -2.398(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<17>|    5.901(R)|   -3.201(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<18>|    5.178(R)|   -2.624(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<19>|    4.936(R)|   -2.430(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<20>|    5.541(R)|   -2.913(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<21>|    4.788(R)|   -2.311(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<22>|    5.671(R)|   -3.017(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<23>|    5.785(R)|   -3.108(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<24>|    5.635(R)|   -2.989(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<25>|    5.430(R)|   -2.825(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<26>|    4.841(R)|   -2.353(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<27>|    5.235(R)|   -2.668(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<28>|    4.667(R)|   -2.214(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<29>|    4.993(R)|   -2.475(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<30>|    5.712(R)|   -3.050(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<31>|    5.536(R)|   -2.909(R)|CLK_BUFGP         |   0.000|
+LOAD        |    2.872(R)|    0.113(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+EN          |    9.628(R)|CLK_BUFGP         |   0.000|
+EOC         |   10.056(R)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.729|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CARRY          |LD_SH          |    5.790|
+DIVIDEND<0>    |EN             |   11.234|
+DIVIDEND<0>    |ERROR          |    9.284|
+DIVIDEND<1>    |EN             |   11.176|
+DIVIDEND<1>    |ERROR          |    9.226|
+DIVIDEND<2>    |EN             |   11.396|
+DIVIDEND<2>    |ERROR          |    9.446|
+DIVIDEND<3>    |EN             |   11.207|
+DIVIDEND<3>    |ERROR          |    9.257|
+DIVIDEND<4>    |EN             |   11.443|
+DIVIDEND<4>    |ERROR          |    9.493|
+DIVIDEND<5>    |EN             |   11.026|
+DIVIDEND<5>    |ERROR          |    9.076|
+DIVIDEND<6>    |EN             |   10.796|
+DIVIDEND<6>    |ERROR          |    8.846|
+DIVIDEND<7>    |EN             |   11.137|
+DIVIDEND<7>    |ERROR          |    9.187|
+DIVIDEND<8>    |EN             |   11.212|
+DIVIDEND<8>    |ERROR          |    9.262|
+DIVIDEND<9>    |EN             |   11.168|
+DIVIDEND<9>    |ERROR          |    9.218|
+DIVIDEND<10>   |EN             |   11.048|
+DIVIDEND<10>   |ERROR          |    9.098|
+DIVIDEND<11>   |EN             |   11.009|
+DIVIDEND<11>   |ERROR          |    9.059|
+DIVIDEND<12>   |EN             |   11.432|
+DIVIDEND<12>   |ERROR          |    9.482|
+DIVIDEND<13>   |EN             |   11.000|
+DIVIDEND<13>   |ERROR          |    9.050|
+DIVIDEND<14>   |EN             |   10.918|
+DIVIDEND<14>   |ERROR          |    8.968|
+DIVIDEND<15>   |EN             |   11.083|
+DIVIDEND<15>   |ERROR          |    9.133|
+DIVIDEND<16>   |EN             |   10.326|
+DIVIDEND<16>   |ERROR          |    8.376|
+DIVIDEND<17>   |EN             |   11.331|
+DIVIDEND<17>   |ERROR          |    9.381|
+DIVIDEND<18>   |EN             |   10.608|
+DIVIDEND<18>   |ERROR          |    8.658|
+DIVIDEND<19>   |EN             |   10.366|
+DIVIDEND<19>   |ERROR          |    8.416|
+DIVIDEND<20>   |EN             |   10.971|
+DIVIDEND<20>   |ERROR          |    9.021|
+DIVIDEND<21>   |EN             |   10.218|
+DIVIDEND<21>   |ERROR          |    8.268|
+DIVIDEND<22>   |EN             |   11.101|
+DIVIDEND<22>   |ERROR          |    9.151|
+DIVIDEND<23>   |EN             |   11.215|
+DIVIDEND<23>   |ERROR          |    9.265|
+DIVIDEND<24>   |EN             |   11.065|
+DIVIDEND<24>   |ERROR          |    9.115|
+DIVIDEND<25>   |EN             |   10.860|
+DIVIDEND<25>   |ERROR          |    8.910|
+DIVIDEND<26>   |EN             |   10.271|
+DIVIDEND<26>   |ERROR          |    8.321|
+DIVIDEND<27>   |EN             |   10.665|
+DIVIDEND<27>   |ERROR          |    8.715|
+DIVIDEND<28>   |EN             |   10.097|
+DIVIDEND<28>   |ERROR          |    8.147|
+DIVIDEND<29>   |EN             |   10.423|
+DIVIDEND<29>   |ERROR          |    8.473|
+DIVIDEND<30>   |EN             |   11.142|
+DIVIDEND<30>   |ERROR          |    9.192|
+DIVIDEND<31>   |EN             |   10.966|
+DIVIDEND<31>   |ERROR          |    9.016|
+LOAD           |EN             |    8.302|
+---------------+---------------+---------+
+
+
+Analysis completed Mon May 03 18:31:24 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4488 MB
+
+
+

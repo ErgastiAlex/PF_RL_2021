@@ -1,6 +1,0 @@
-vhdl work "FF_D.vhd"
-vhdl work "FA.vhd"
-vhdl work "Reg_PP.vhd"
-vhdl work "RCA.vhd"
-vhdl work "Counter.vhd"
-vhdl work "Counter_TB.vhd"

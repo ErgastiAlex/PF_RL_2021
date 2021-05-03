@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter_TB_isim_par.exe" -prj "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter_TB_par.prj" "work.Counter_TB" 
+-intstyle "ise" -incremental -o "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_isim_beh.exe" -prj "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU_TB_beh.prj" "work.CU_TB" 
