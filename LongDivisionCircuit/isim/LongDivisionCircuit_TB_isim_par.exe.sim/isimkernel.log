@@ -1,0 +1,31 @@
+Command line:
+   LongDivisionCircuit_TB_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/LongDivisionCircuit_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  56280
+
+Mon May 10 11:18:22 2021
+
+
+ Elaboration Time: 0.46875 sec
+
+ Current Memory Usage: 5197.32 Meg
+
+ Total Signals          : 8336
+ Total Nets             : 5227
+ Total Signal Drivers   : 5140
+ Total Blocks           : 2121
+ Total Primitive Blocks : 1118
+ Total Processes        : 5139
+ Total Traceable Variables  : 12057
+ Total Scalar Nets and Variables : 42129
+Total Line Count : 16950
+
+ Total Simulation Time: 0.78125 sec
+
+ Current Memory Usage: 5511.9 Meg
+
+Mon May 10 11:19:21 2021
+

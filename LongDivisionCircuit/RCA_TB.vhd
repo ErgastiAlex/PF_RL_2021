@@ -41,11 +41,31 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      wait for 100 ns;	
-		x<="11111111111111111111111111111111";
-		y<="00000000000000000000000000000001";
-
-		--35 time of set=> 36 ns of clock
+		-- sum all 0
+      x<=(others=>'0');
+		y<=(others=>'0');
+		wait for 100 ns;
+		
+		-- longest sum
+		x	<=(others=>'1');
+		y	<=(others=>'0');
+		c0	<='1';
+		wait for 100 ns;
+		
+		
+		-- 5 - 2
+		x <=(0=>'1',2=>'1',others=>'0');
+		y <=(1=>'0',others=>'1');
+		c0<='1';
+		wait for 100 ns;
+		
+		-- 2 - 3
+		x <=(1=>'1',others=>'0');
+		y <=(0=>'0',1=>'0',others=>'1');
+		c0<='1';
+		wait for 100 ns;
+		
+		--38.465 ns => 40 ns
       wait;
    end process;
 

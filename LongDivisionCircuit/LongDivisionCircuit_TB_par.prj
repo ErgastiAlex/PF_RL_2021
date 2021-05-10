@@ -1,0 +1,2 @@
+vhdl work "netgen/par/LongDivisionCircuit_timesim.vhd"
+vhdl work "LongDivisionCircuit_TB.vhd"

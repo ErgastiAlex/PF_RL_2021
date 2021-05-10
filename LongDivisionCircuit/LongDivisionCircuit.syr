@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "LongDivisionCircuit"
 Output Format                      : NGC
-Target Device                      : xc3s200-5-pq208
+Target Device                      : xc3s1500-5-fg320
 
 ---- Source Options
 Top Module Name                    : LongDivisionCircuit
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 100000
+Global Maximum Fanout              : 500
 Add Generic Clock Buffer(BUFG)     : 8
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -139,9 +139,6 @@ Analyzing hierarchy for entity <RegShifter_PS> in library <work> (architecture <
 Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
 	n = 32
 
-Analyzing hierarchy for entity <MUX> in library <work> (architecture <rtl>) with generics.
-	n = 32
-
 Analyzing hierarchy for entity <CU> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
@@ -151,7 +148,7 @@ Analyzing hierarchy for entity <FF_D_2Input> in library <work> (architecture <rt
 Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <Counter> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <MUX> in library <work> (architecture <rtl>) with generics.
 	n = 1
@@ -159,12 +156,14 @@ Analyzing hierarchy for entity <MUX> in library <work> (architecture <rtl>) with
 Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <Reg_PP> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <FF_D> in library <work> (architecture <rtl>).
 
@@ -198,9 +197,9 @@ Entity <RegShifter_PS> analyzed. Unit <RegShifter_PS> generated.
 Analyzing Entity <FF_D_2Input> in library <work> (Architecture <rtl>).
 Entity <FF_D_2Input> analyzed. Unit <FF_D_2Input> generated.
 
-Analyzing generic Entity <MUX.2> in library <work> (Architecture <rtl>).
+Analyzing generic Entity <MUX> in library <work> (Architecture <rtl>).
 	n = 1
-Entity <MUX.2> analyzed. Unit <MUX.2> generated.
+Entity <MUX> analyzed. Unit <MUX> generated.
 
 Analyzing generic Entity <RCA.1> in library <work> (Architecture <gl>).
 	n = 32
@@ -209,24 +208,20 @@ Entity <RCA.1> analyzed. Unit <RCA.1> generated.
 Analyzing Entity <FA> in library <work> (Architecture <rtl>).
 Entity <FA> analyzed. Unit <FA> generated.
 
-Analyzing generic Entity <MUX.1> in library <work> (Architecture <rtl>).
-	n = 32
-Entity <MUX.1> analyzed. Unit <MUX.1> generated.
-
 Analyzing Entity <CU> in library <work> (Architecture <rtl>).
 Entity <CU> analyzed. Unit <CU> generated.
 
 Analyzing generic Entity <Counter> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 WARNING:Xst:753 - "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" line 54: Unconnected output port 'COUT' of component 'RCA'.
 Entity <Counter> analyzed. Unit <Counter> generated.
 
 Analyzing generic Entity <RCA.2> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 Entity <RCA.2> analyzed. Unit <RCA.2> generated.
 
 Analyzing generic Entity <Reg_PP.2> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 Entity <Reg_PP.2> analyzed. Unit <Reg_PP.2> generated.
 
 
@@ -236,11 +231,6 @@ Entity <Reg_PP.2> analyzed. Unit <Reg_PP.2> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <MUX_1>.
-    Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd".
-Unit <MUX_1> synthesized.
-
-
 Synthesizing Unit <FF_D>.
     Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/FF_D.vhd".
     Found 1-bit register for signal <Q>.
@@ -249,9 +239,9 @@ Synthesizing Unit <FF_D>.
 Unit <FF_D> synthesized.
 
 
-Synthesizing Unit <MUX_2>.
+Synthesizing Unit <MUX>.
     Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/MUX.vhd".
-Unit <MUX_2> synthesized.
+Unit <MUX> synthesized.
 
 
 Synthesizing Unit <FA>.
@@ -299,6 +289,7 @@ Unit <Counter> synthesized.
 
 Synthesizing Unit <CU>.
     Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd".
+WARNING:Xst:646 - Signal <INTERNAL_RESULT<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <CU> synthesized.
 
 
@@ -311,10 +302,10 @@ Unit <LongDivisionCircuit> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 101
- 1-bit register                                        : 101
-# Xors                                                 : 37
- 1-bit xor3                                            : 37
+# Registers                                            : 102
+ 1-bit register                                        : 102
+# Xors                                                 : 38
+ 1-bit xor3                                            : 38
 
 =========================================================================
 
@@ -327,10 +318,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 101
- Flip-Flops                                            : 101
-# Xors                                                 : 37
- 1-bit xor3                                            : 37
+# Registers                                            : 102
+ Flip-Flops                                            : 102
+# Xors                                                 : 38
+ 1-bit xor3                                            : 38
 
 =========================================================================
 
@@ -348,7 +339,7 @@ Optimizing unit <RegShifter_PS> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LongDivisionCircuit, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block LongDivisionCircuit, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -356,8 +347,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 101
- Flip-Flops                                            : 101
+# Registers                                            : 102
+ Flip-Flops                                            : 102
 
 =========================================================================
 
@@ -386,22 +377,21 @@ Design Statistics
 # IOs                              : 132
 
 Cell Usage :
-# BELS                             : 238
+# BELS                             : 242
 #      GND                         : 1
 #      INV                         : 33
 #      LUT2                        : 2
-#      LUT2_L                      : 1
-#      LUT3                        : 82
-#      LUT3_D                      : 4
-#      LUT3_L                      : 15
-#      LUT4                        : 61
-#      LUT4_D                      : 19
-#      LUT4_L                      : 1
+#      LUT3                        : 74
+#      LUT3_D                      : 12
+#      LUT3_L                      : 10
+#      LUT4                        : 74
+#      LUT4_D                      : 15
+#      LUT4_L                      : 2
 #      MUXCY                       : 8
 #      MUXF5                       : 10
 #      VCC                         : 1
-# FlipFlops/Latches                : 101
-#      FDRE                        : 101
+# FlipFlops/Latches                : 102
+#      FDRE                        : 102
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 131
@@ -412,13 +402,13 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s200pq208-5 
+Selected Device : 3s1500fg320-5 
 
- Number of Slices:                      112  out of   1920     5%  
- Number of Slice Flip Flops:            101  out of   3840     2%  
- Number of 4 input LUTs:                218  out of   3840     5%  
+ Number of Slices:                      113  out of  13312     0%  
+ Number of Slice Flip Flops:            102  out of  26624     0%  
+ Number of 4 input LUTs:                222  out of  26624     0%  
  Number of IOs:                         132
- Number of bonded IOBs:                 132  out of    141    93%  
+ Number of bonded IOBs:                 132  out of    221    59%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -442,7 +432,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 101   |
+CLK                                | BUFGP                  | 102   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -453,10 +443,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 10.817ns (Maximum Frequency: 92.451MHz)
-   Minimum input arrival time before clock: 6.830ns
-   Maximum output required time after clock: 8.436ns
-   Maximum combinational path delay: 8.921ns
+   Minimum period: 9.994ns (Maximum Frequency: 100.059MHz)
+   Minimum input arrival time before clock: 5.694ns
+   Maximum output required time after clock: 8.870ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
@@ -464,95 +454,66 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 10.817ns (frequency: 92.451MHz)
-  Total number of paths / destination ports: 21847 / 138
+  Clock period: 9.994ns (frequency: 100.059MHz)
+  Total number of paths / destination ports: 12862 / 140
 -------------------------------------------------------------------------
-Delay:               10.817ns (Levels of Logic = 7)
-  Source:            DEN_Register_32/reg_gen[1].ffd/Q (FF)
-  Destination:       NUM_ParSerialShifter_32/gen_ff_d[1].ffother/ff/Q (FF)
+Delay:               9.994ns (Levels of Logic = 7)
+  Source:            REM_ParSerialShifter_32/ff0/ff/Q (FF)
+  Destination:       REM_ParSerialShifter_32/ff0/ff/Q (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: DEN_Register_32/reg_gen[1].ffd/Q to NUM_ParSerialShifter_32/gen_ff_d[1].ffother/ff/Q
+  Data Path: REM_ParSerialShifter_32/ff0/ff/Q to REM_ParSerialShifter_32/ff0/ff/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.626   1.040  DEN_Register_32/reg_gen[1].ffd/Q (DEN_Register_32/reg_gen[1].ffd/Q)
-     LUT4_D:I0->LO         1   0.479   0.159  Adder/rca[1].fa_i/COUT1 (N217)
-     LUT3:I2->O            3   0.479   0.830  Adder/rca[3].fa_i/Mxor_S_xo<0>11 (Adder/N01)
-     LUT3:I2->O            5   0.479   0.842  Adder/rca[5].fa_i/Mxor_S_xo<0>11 (Adder/N1)
-     LUT3:I2->O           10   0.479   0.964  Adder/rca[9].fa_i/Mxor_S_xo<0>11 (Adder/N3)
-     MUXF5:S->O            9   0.540   1.014  Adder/rca[25].fa_i/Mxor_S_xo<0>11 (Adder/N11)
-     LUT3_D:I2->O         56   0.479   1.751  Adder/rca[31].fa_i/COUT1 (CARRY_INTERNAL)
+     FDRE:C->Q             3   0.626   1.066  REM_ParSerialShifter_32/ff0/ff/Q (REM_ParSerialShifter_32/ff0/ff/Q)
+     LUT4:I0->O            3   0.479   0.771  Adder/rca[1].fa_i/COUT1 (Adder/C_INTERNAL<2>)
+     MUXF5:S->O            3   0.540   0.830  Adder/rca[3].fa_i/COUT1 (Adder/C_INTERNAL<4>)
+     LUT3_D:I2->LO         1   0.479   0.159  Adder/rca[5].fa_i/COUT1 (N180)
+     LUT3:I2->O            6   0.479   0.912  Adder/rca[9].fa_i/COUT1 (Adder/C_INTERNAL<10>)
+     LUT3:I2->O           12   0.479   1.009  Adder/rca[17].fa_i/COUT1 (Adder/C_INTERNAL<18>)
+     LUT3_D:I2->O         11   0.479   1.031  Adder/rca[31].fa_i/COUT1 (CARRY_INTERNAL)
      LUT3:I2->O            1   0.479   0.000  REM_ParSerialShifter_32/ff0/mux_2/Z_0_mux00001 (REM_ParSerialShifter_32/ff0/Z_INTERNAL)
      FDRE:D                    0.176          REM_ParSerialShifter_32/ff0/ff/Q
     ----------------------------------------
-    Total                     10.817ns (4.216ns logic, 6.601ns route)
-                                       (39.0% logic, 61.0% route)
+    Total                      9.994ns (4.216ns logic, 5.778ns route)
+                                       (42.2% logic, 57.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 2410 / 202
+  Total number of paths / destination ports: 236 / 204
 -------------------------------------------------------------------------
-Offset:              6.830ns (Levels of Logic = 11)
-  Source:            DIVISOR<8> (PAD)
-  Destination:       control_unit/counter_5/reg/reg_gen[0].ffd/Q (FF)
+Offset:              5.694ns (Levels of Logic = 2)
+  Source:            LOAD (PAD)
+  Destination:       control_unit/counter_6/reg/reg_gen[0].ffd/Q (FF)
   Destination Clock: CLK rising
 
-  Data Path: DIVISOR<8> to control_unit/counter_5/reg/reg_gen[0].ffd/Q
+  Data Path: LOAD to control_unit/counter_6/reg/reg_gen[0].ffd/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.715   1.040  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
-     LUT4:I0->O            1   0.479   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.435   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O           2   0.265   0.804  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
-     LUT3:I2->O           69   0.479   1.755  control_unit/INTERNAL_EN1 (EN_INTERNAL)
-     FDRE:CE                   0.524          control_unit/counter_5/reg/reg_gen[4].ffd/Q
+     IBUF:I->O           103   0.715   2.216  LOAD_IBUF (LOAD_IBUF)
+     LUT3:I0->O           70   0.479   1.760  control_unit/INTERNAL_EN1 (EN_INTERNAL)
+     FDRE:CE                   0.524          control_unit/counter_6/reg/reg_gen[5].ffd/Q
     ----------------------------------------
-    Total                      6.830ns (3.230ns logic, 3.600ns route)
-                                       (47.3% logic, 52.7% route)
+    Total                      5.694ns (1.718ns logic, 3.976ns route)
+                                       (30.2% logic, 69.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 69 / 65
+  Total number of paths / destination ports: 97 / 66
 -------------------------------------------------------------------------
-Offset:              8.436ns (Levels of Logic = 3)
-  Source:            control_unit/counter_5/reg/reg_gen[3].ffd/Q (FF)
-  Destination:       EOC (PAD)
+Offset:              8.870ns (Levels of Logic = 10)
+  Source:            DEN_Register_32/reg_gen[8].ffd/Q (FF)
+  Destination:       ERROR (PAD)
   Source Clock:      CLK rising
 
-  Data Path: control_unit/counter_5/reg/reg_gen[3].ffd/Q to EOC
+  Data Path: DEN_Register_32/reg_gen[8].ffd/Q to ERROR
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.626   1.074  control_unit/counter_5/reg/reg_gen[3].ffd/Q (control_unit/counter_5/reg/reg_gen[3].ffd/Q)
-     LUT2_L:I0->LO         1   0.479   0.123  control_unit/INTERNAL_EOC_cmp_eq0000_SW0 (N01)
-     LUT4:I3->O            2   0.479   0.745  control_unit/INTERNAL_EOC_cmp_eq0000 (EOC_OBUF)
-     OBUF:I->O                 4.909          EOC_OBUF (EOC)
-    ----------------------------------------
-    Total                      8.436ns (6.493ns logic, 1.943ns route)
-                                       (77.0% logic, 23.0% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 32 / 1
--------------------------------------------------------------------------
-Delay:               8.921ns (Levels of Logic = 11)
-  Source:            DIVISOR<8> (PAD)
-  Destination:       ERROR (PAD)
-
-  Data Path: DIVISOR<8> to ERROR
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.715   1.040  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
+     FDRE:C->Q             5   0.626   1.078  DEN_Register_32/reg_gen[8].ffd/Q (DEN_Register_32/reg_gen[8].ffd/Q)
      LUT4:I0->O            1   0.479   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.435   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.056   0.000  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
@@ -564,20 +525,20 @@ Delay:               8.921ns (Levels of Logic = 11)
      MUXCY:CI->O           2   0.265   0.745  control_unit/INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
      OBUF:I->O                 4.909          ERROR_OBUF (ERROR)
     ----------------------------------------
-    Total                      8.921ns (7.136ns logic, 1.786ns route)
-                                       (80.0% logic, 20.0% route)
+    Total                      8.870ns (7.047ns logic, 1.823ns route)
+                                       (79.4% logic, 20.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.98 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.04 secs
  
 --> 
 
-Total memory usage is 4513212 kilobytes
+Total memory usage is 4513216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

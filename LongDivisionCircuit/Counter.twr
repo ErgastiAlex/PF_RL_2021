@@ -7,7 +7,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
 
 Design file:              Counter.ncd
 Physical constraint file: Counter.pcf
-Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Device,package,speed:     xc3s1500,fg320,-5 (PRODUCTION 1.39 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -44,8 +44,8 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-EN          |    1.424(R)|    0.176(R)|CLK_BUFGP         |   0.000|
-RESET       |    1.486(R)|    0.622(R)|CLK_BUFGP         |   0.000|
+EN          |    1.778(R)|    0.349(R)|CLK_BUFGP         |   0.000|
+RESET       |    1.837(R)|    0.363(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -53,11 +53,12 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-RESULT<0>   |    8.063(R)|CLK_BUFGP         |   0.000|
-RESULT<1>   |    8.562(R)|CLK_BUFGP         |   0.000|
-RESULT<2>   |    8.260(R)|CLK_BUFGP         |   0.000|
-RESULT<3>   |    8.187(R)|CLK_BUFGP         |   0.000|
-RESULT<4>   |    8.494(R)|CLK_BUFGP         |   0.000|
+RESULT<0>   |    9.042(R)|CLK_BUFGP         |   0.000|
+RESULT<1>   |    8.585(R)|CLK_BUFGP         |   0.000|
+RESULT<2>   |    8.987(R)|CLK_BUFGP         |   0.000|
+RESULT<3>   |    9.010(R)|CLK_BUFGP         |   0.000|
+RESULT<4>   |    8.596(R)|CLK_BUFGP         |   0.000|
+RESULT<5>   |    8.888(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -65,18 +66,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    2.360|         |         |         |
+CLK            |    2.562|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon May 03 16:49:16 2021 
+Analysis completed Sat May 08 17:41:33 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4488 MB
+Peak Memory Usage: 4518 MB
 
 
 

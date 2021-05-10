@@ -31,7 +31,7 @@ ARCHITECTURE behavior OF Reg_PP_TB IS
    signal PO : std_logic_vector(31 downto 0);
 
    -- Clock period definitions
-   constant CLK_period : time := 10 ns;
+   constant CLK_period : time := 20 ns;
  
 BEGIN
  
@@ -57,13 +57,21 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
+		RESET<='1';
 		wait for 100 ns;
 		
 		EN<='1';
-		RESET<='1';
-		wait for CLK_period;
 		RESET<='0';
 		
+		--Test Load 1 into PI
+		PI<=(others=>'1');
+		wait for CLK_period;
+		
+		--Test Load 0 into PI
+		PI<=(others=>'0');
+		wait for CLK_period;
+		
+
 		--Test random input into register with EN=1
 		PI<="10000011000000001000101100011011"; --2197850907
       wait for CLK_period;
@@ -72,13 +80,19 @@ BEGIN
 		PI<="00101100111001000011010100000000"; --753153280
 		wait for CLK_period;
 		
-		--Disable EN and test random input
+		--Test reset with en=1
+		RESET<='1';
+		wait for CLK_period;
+		
+		--Disable EN
 		EN<='0';
-		wait for CLK_period/2;
-		PI<="00101100111001111011011101110000"; --753383280
+		RESET<='0';
+		PI<=(others=>'1');
+		wait for CLK_period;
 
 
-		--clock: tempo di set=9.822 => 10ns
+
+		--clock: tempo di set=9.822 => 20ns
       wait;
    end process;
 

@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "CU"
 Output Format                      : NGC
-Target Device                      : xc3s200-5-pq208
+Target Device                      : xc3s1500-5-fg320
 
 ---- Source Options
 Top Module Name                    : CU
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 100000
+Global Maximum Fanout              : 500
 Add Generic Clock Buffer(BUFG)     : 8
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -115,8 +115,7 @@ Architecture gl of Entity reg_pp is up to date.
 Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" in Library work.
 Architecture gl of Entity counter is up to date.
 Compiling vhdl file "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd" in Library work.
-Entity <cu> compiled.
-Entity <cu> (Architecture <rtl>) compiled.
+Architecture rtl of Entity cu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -124,13 +123,13 @@ Entity <cu> (Architecture <rtl>) compiled.
 Analyzing hierarchy for entity <CU> in library <work> (architecture <rtl>).
 
 Analyzing hierarchy for entity <Counter> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <RCA> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <Reg_PP> in library <work> (architecture <gl>) with generics.
-	n = 5
+	n = 6
 
 Analyzing hierarchy for entity <FA> in library <work> (architecture <rtl>).
 
@@ -144,19 +143,19 @@ Analyzing Entity <CU> in library <work> (Architecture <rtl>).
 Entity <CU> analyzed. Unit <CU> generated.
 
 Analyzing generic Entity <Counter> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 WARNING:Xst:753 - "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/Counter.vhd" line 54: Unconnected output port 'COUT' of component 'RCA'.
 Entity <Counter> analyzed. Unit <Counter> generated.
 
 Analyzing generic Entity <RCA> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 Entity <RCA> analyzed. Unit <RCA> generated.
 
 Analyzing Entity <FA> in library <work> (Architecture <rtl>).
 Entity <FA> analyzed. Unit <FA> generated.
 
 Analyzing generic Entity <Reg_PP> in library <work> (Architecture <gl>).
-	n = 5
+	n = 6
 Entity <Reg_PP> analyzed. Unit <Reg_PP> generated.
 
 Analyzing Entity <FF_D> in library <work> (Architecture <rtl>).
@@ -202,6 +201,7 @@ Unit <Counter> synthesized.
 
 Synthesizing Unit <CU>.
     Related source file is "C:/Users/Alex/Documents/PF_RL_2021/LongDivisionCircuit/CU.vhd".
+WARNING:Xst:646 - Signal <INTERNAL_RESULT<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <CU> synthesized.
 
 
@@ -209,10 +209,10 @@ Unit <CU> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 5
- 1-bit register                                        : 5
-# Xors                                                 : 5
- 1-bit xor3                                            : 5
+# Registers                                            : 6
+ 1-bit register                                        : 6
+# Xors                                                 : 6
+ 1-bit xor3                                            : 6
 
 =========================================================================
 
@@ -225,10 +225,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 5
- Flip-Flops                                            : 5
-# Xors                                                 : 5
- 1-bit xor3                                            : 5
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+# Xors                                                 : 6
+ 1-bit xor3                                            : 6
 
 =========================================================================
 
@@ -248,8 +248,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 5
- Flip-Flops                                            : 5
+# Registers                                            : 6
+ Flip-Flops                                            : 6
 
 =========================================================================
 
@@ -278,19 +278,17 @@ Design Statistics
 # IOs                              : 39
 
 Cell Usage :
-# BELS                             : 28
+# BELS                             : 26
 #      GND                         : 1
 #      INV                         : 1
-#      LUT2                        : 1
-#      LUT3                        : 2
-#      LUT3_L                      : 1
-#      LUT4                        : 11
-#      LUT4_L                      : 1
+#      LUT2                        : 2
+#      LUT3                        : 3
+#      LUT4                        : 9
+#      LUT4_D                      : 1
 #      MUXCY                       : 8
-#      MUXF5                       : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 5
-#      FDRE                        : 5
+# FlipFlops/Latches                : 6
+#      FDRE                        : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 38
@@ -301,13 +299,13 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s200pq208-5 
+Selected Device : 3s1500fg320-5 
 
- Number of Slices:                        9  out of   1920     0%  
- Number of Slice Flip Flops:              5  out of   3840     0%  
- Number of 4 input LUTs:                 17  out of   3840     0%  
+ Number of Slices:                        8  out of  13312     0%  
+ Number of Slice Flip Flops:              6  out of  26624     0%  
+ Number of 4 input LUTs:                 16  out of  26624     0%  
  Number of IOs:                          39
- Number of bonded IOBs:                  39  out of    141    27%  
+ Number of bonded IOBs:                  39  out of    221    17%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -331,7 +329,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 5     |
+CLK                                | BUFGP                  | 6     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -342,10 +340,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 4.158ns (Maximum Frequency: 240.500MHz)
-   Minimum input arrival time before clock: 5.973ns
-   Maximum output required time after clock: 8.543ns
-   Maximum combinational path delay: 10.358ns
+   Minimum period: 3.651ns (Maximum Frequency: 273.875MHz)
+   Minimum input arrival time before clock: 6.152ns
+   Maximum output required time after clock: 7.750ns
+   Maximum combinational path delay: 10.537ns
 
 Timing Detail:
 --------------
@@ -353,41 +351,41 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 4.158ns (frequency: 240.500MHz)
-  Total number of paths / destination ports: 40 / 10
+  Clock period: 3.651ns (frequency: 273.875MHz)
+  Total number of paths / destination ports: 27 / 12
 -------------------------------------------------------------------------
-Delay:               4.158ns (Levels of Logic = 2)
-  Source:            counter_5/reg/reg_gen[3].ffd/Q (FF)
-  Destination:       counter_5/reg/reg_gen[4].ffd/Q (FF)
+Delay:               3.651ns (Levels of Logic = 2)
+  Source:            counter_6/reg/reg_gen[3].ffd/Q (FF)
+  Destination:       counter_6/reg/reg_gen[4].ffd/Q (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: counter_5/reg/reg_gen[3].ffd/Q to counter_5/reg/reg_gen[4].ffd/Q
+  Data Path: counter_6/reg/reg_gen[3].ffd/Q to counter_6/reg/reg_gen[4].ffd/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.626   1.074  counter_5/reg/reg_gen[3].ffd/Q (counter_5/reg/reg_gen[3].ffd/Q)
-     LUT4_L:I0->LO         1   0.479   0.123  INTERNAL_EN1_SW0 (N4)
-     LUT4:I3->O            6   0.479   0.853  INTERNAL_EN1 (EN_OBUF)
-     FDRE:CE                   0.524          counter_5/reg/reg_gen[4].ffd/Q
+     FDRE:C->Q             2   0.626   1.040  counter_6/reg/reg_gen[3].ffd/Q (counter_6/reg/reg_gen[3].ffd/Q)
+     LUT4_D:I0->O          1   0.479   0.851  counter_6/adder/rca[3].fa_i/COUT_and00011 (counter_6/adder/C_INTERNAL<4>)
+     LUT2:I1->O            1   0.479   0.000  counter_6/adder/rca[4].fa_i/Mxor_S_xo<0>1 (counter_6/RCA_RESULT<4>)
+     FDRE:D                    0.176          counter_6/reg/reg_gen[4].ffd/Q
     ----------------------------------------
-    Total                      4.158ns (2.108ns logic, 2.050ns route)
-                                       (50.7% logic, 49.3% route)
+    Total                      3.651ns (1.760ns logic, 1.891ns route)
+                                       (48.2% logic, 51.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 170 / 10
+  Total number of paths / destination ports: 204 / 12
 -------------------------------------------------------------------------
-Offset:              5.973ns (Levels of Logic = 11)
-  Source:            DIVIDEND<8> (PAD)
-  Destination:       counter_5/reg/reg_gen[4].ffd/Q (FF)
+Offset:              6.152ns (Levels of Logic = 11)
+  Source:            DIVISOR<8> (PAD)
+  Destination:       counter_6/reg/reg_gen[5].ffd/Q (FF)
   Destination Clock: CLK rising
 
-  Data Path: DIVIDEND<8> to counter_5/reg/reg_gen[4].ffd/Q
+  Data Path: DIVISOR<8> to counter_6/reg/reg_gen[5].ffd/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.715   0.976  DIVIDEND_8_IBUF (DIVIDEND_8_IBUF)
+     IBUF:I->O             1   0.715   0.976  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
      LUT4:I0->O            1   0.479   0.000  INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.435   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
@@ -396,47 +394,46 @@ Offset:              5.973ns (Levels of Logic = 11)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<4> (INTERNAL_ERROR_cmp_eq0000_wg_cy<4>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<5> (INTERNAL_ERROR_cmp_eq0000_wg_cy<5>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<6> (INTERNAL_ERROR_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O           2   0.265   0.915  INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
-     LUT4:I1->O            6   0.479   0.853  INTERNAL_EN1 (EN_OBUF)
-     FDRE:CE                   0.524          counter_5/reg/reg_gen[4].ffd/Q
+     MUXCY:CI->O           2   0.264   1.040  INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
+     LUT3:I0->O            7   0.479   0.906  INTERNAL_EN1 (EN_OBUF)
+     FDRE:CE                   0.524          counter_6/reg/reg_gen[5].ffd/Q
     ----------------------------------------
-    Total                      5.973ns (3.230ns logic, 2.744ns route)
-                                       (54.1% logic, 45.9% route)
+    Total                      6.152ns (3.230ns logic, 2.922ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 10 / 2
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              8.543ns (Levels of Logic = 3)
-  Source:            counter_5/reg/reg_gen[3].ffd/Q (FF)
+Offset:              7.750ns (Levels of Logic = 2)
+  Source:            counter_6/reg/reg_gen[5].ffd/Q (FF)
   Destination:       EN (PAD)
   Source Clock:      CLK rising
 
-  Data Path: counter_5/reg/reg_gen[3].ffd/Q to EN
+  Data Path: counter_6/reg/reg_gen[5].ffd/Q to EN
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.626   1.074  counter_5/reg/reg_gen[3].ffd/Q (counter_5/reg/reg_gen[3].ffd/Q)
-     LUT4_L:I0->LO         1   0.479   0.123  INTERNAL_EN1_SW0 (N4)
-     LUT4:I3->O            6   0.479   0.853  INTERNAL_EN1 (EN_OBUF)
+     FDRE:C->Q             3   0.626   0.830  counter_6/reg/reg_gen[5].ffd/Q (counter_6/reg/reg_gen[5].ffd/Q)
+     LUT3:I2->O            7   0.479   0.906  INTERNAL_EN1 (EN_OBUF)
      OBUF:I->O                 4.909          EN_OBUF (EN)
     ----------------------------------------
-    Total                      8.543ns (6.493ns logic, 2.050ns route)
-                                       (76.0% logic, 24.0% route)
+    Total                      7.750ns (6.014ns logic, 1.736ns route)
+                                       (77.6% logic, 22.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 66 / 3
 -------------------------------------------------------------------------
-Delay:               10.358ns (Levels of Logic = 12)
-  Source:            DIVIDEND<8> (PAD)
+Delay:               10.537ns (Levels of Logic = 12)
+  Source:            DIVISOR<8> (PAD)
   Destination:       EN (PAD)
 
-  Data Path: DIVIDEND<8> to EN
+  Data Path: DIVISOR<8> to EN
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.715   0.976  DIVIDEND_8_IBUF (DIVIDEND_8_IBUF)
+     IBUF:I->O             1   0.715   0.976  DIVISOR_8_IBUF (DIVISOR_8_IBUF)
      LUT4:I0->O            1   0.479   0.000  INTERNAL_ERROR_cmp_eq0000_wg_lut<0> (INTERNAL_ERROR_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.435   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<0> (INTERNAL_ERROR_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<1> (INTERNAL_ERROR_cmp_eq0000_wg_cy<1>)
@@ -445,24 +442,24 @@ Delay:               10.358ns (Levels of Logic = 12)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<4> (INTERNAL_ERROR_cmp_eq0000_wg_cy<4>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<5> (INTERNAL_ERROR_cmp_eq0000_wg_cy<5>)
      MUXCY:CI->O           1   0.056   0.000  INTERNAL_ERROR_cmp_eq0000_wg_cy<6> (INTERNAL_ERROR_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O           2   0.265   0.915  INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
-     LUT4:I1->O            6   0.479   0.853  INTERNAL_EN1 (EN_OBUF)
+     MUXCY:CI->O           2   0.265   1.040  INTERNAL_ERROR_cmp_eq0000_wg_cy<7> (ERROR_OBUF)
+     LUT3:I0->O            7   0.479   0.906  INTERNAL_EN1 (EN_OBUF)
      OBUF:I->O                 4.909          EN_OBUF (EN)
     ----------------------------------------
-    Total                     10.358ns (7.615ns logic, 2.744ns route)
-                                       (73.5% logic, 26.5% route)
+    Total                     10.537ns (7.614ns logic, 2.922ns route)
+                                       (72.3% logic, 27.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.09 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.61 secs
  
 --> 
 
-Total memory usage is 4513148 kilobytes
+Total memory usage is 4513188 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

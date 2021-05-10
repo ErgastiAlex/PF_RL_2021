@@ -6,9 +6,9 @@ Structure -tm RCA -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim
 RCA.ncd RCA_timesim.vhd  
 
 Read and Annotate design 'RCA.ncd' ...
-Loading device for application Rf_Device from file '3s200.nph' in environment
+Loading device for application Rf_Device from file '3s1500.nph' in environment
 C:\Xilinx\14.7\ISE_DS\ISE\.
-   "RCA" is an NCD, version 3.2, device xc3s200, package pq208, speed -5
+   "RCA" is an NCD, version 3.2, device xc3s1500, package fg320, speed -5
 Loading constraints from 'RCA.pcf'...
 The speed grade (-5) differs from the speed grade specified in the .ncd file
 (-5).
@@ -34,4 +34,4 @@ INFO:NetListWriters:665 - For more information on how to pass the SDF switches
    to the simulator, see your Simulator tool documentation.
 Number of warnings: 0
 Number of info messages: 3
-Total memory usage is 4431016 kilobytes
+Total memory usage is 4460036 kilobytes

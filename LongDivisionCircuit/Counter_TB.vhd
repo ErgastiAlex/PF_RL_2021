@@ -28,16 +28,17 @@ ARCHITECTURE behavior OF Counter_TB IS
    signal RESULT : std_logic_vector(4 downto 0);
 
    -- Clock period definitions
-   constant CLK_period : time := 16 ns;
+   constant CLK_period : time := 20 ns;
  
 BEGIN
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Counter PORT MAP (
+   uut: Counter
+			PORT MAP (
           CLK => CLK,
           RESET => RESET,
           EN => EN,
           RESULT => RESULT
-        );
+			);
 
    -- Clock process definitions
    CLK_process :process
@@ -52,16 +53,13 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
+		RESET<='1';
 		wait for 100 ns;
 		
 		-- init to zero
-		EN<='1';
-		RESET<='1';
-		wait for CLK_period;
-		
-		-- count 10 times
 		RESET<='0';
-      wait for CLK_period*10;
+		EN<='1';
+		wait for CLK_period*10;
 		
 		-- reset to 0
 		RESET<='1';

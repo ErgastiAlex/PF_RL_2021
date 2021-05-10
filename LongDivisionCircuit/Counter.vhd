@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Counter is
 	generic(
-		n:	integer:=5
+		n:	integer:=6
 	);
 	port(
 		CLK:		in		std_logic;

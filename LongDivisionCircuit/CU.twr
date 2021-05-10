@@ -7,7 +7,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
 
 Design file:              CU.ncd
 Physical constraint file: CU.pcf
-Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Device,package,speed:     xc3s1500,fg320,-5 (PRODUCTION 1.39 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -44,39 +44,39 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-DIVIDEND<0> |    5.804(R)|   -3.124(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<1> |    5.746(R)|   -3.077(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<2> |    5.966(R)|   -3.253(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<3> |    5.777(R)|   -3.102(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<4> |    6.013(R)|   -3.291(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<5> |    5.596(R)|   -2.958(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<6> |    5.366(R)|   -2.774(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<7> |    5.707(R)|   -3.047(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<8> |    5.782(R)|   -3.107(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<9> |    5.738(R)|   -3.072(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<10>|    5.618(R)|   -2.976(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<11>|    5.579(R)|   -2.944(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<12>|    6.002(R)|   -3.282(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<13>|    5.570(R)|   -2.937(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<14>|    5.488(R)|   -2.871(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<15>|    5.653(R)|   -3.003(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<16>|    4.896(R)|   -2.398(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<17>|    5.901(R)|   -3.201(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<18>|    5.178(R)|   -2.624(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<19>|    4.936(R)|   -2.430(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<20>|    5.541(R)|   -2.913(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<21>|    4.788(R)|   -2.311(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<22>|    5.671(R)|   -3.017(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<23>|    5.785(R)|   -3.108(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<24>|    5.635(R)|   -2.989(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<25>|    5.430(R)|   -2.825(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<26>|    4.841(R)|   -2.353(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<27>|    5.235(R)|   -2.668(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<28>|    4.667(R)|   -2.214(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<29>|    4.993(R)|   -2.475(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<30>|    5.712(R)|   -3.050(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<31>|    5.536(R)|   -2.909(R)|CLK_BUFGP         |   0.000|
-LOAD        |    2.872(R)|    0.113(R)|CLK_BUFGP         |   0.000|
+DIVISOR<0>  |    6.179(R)|   -3.836(R)|CLK_BUFGP         |   0.000|
+DIVISOR<1>  |    6.896(R)|   -4.409(R)|CLK_BUFGP         |   0.000|
+DIVISOR<2>  |    6.416(R)|   -4.025(R)|CLK_BUFGP         |   0.000|
+DIVISOR<3>  |    6.330(R)|   -3.957(R)|CLK_BUFGP         |   0.000|
+DIVISOR<4>  |    6.361(R)|   -3.982(R)|CLK_BUFGP         |   0.000|
+DIVISOR<5>  |    6.123(R)|   -3.791(R)|CLK_BUFGP         |   0.000|
+DIVISOR<6>  |    6.240(R)|   -3.885(R)|CLK_BUFGP         |   0.000|
+DIVISOR<7>  |    6.240(R)|   -3.885(R)|CLK_BUFGP         |   0.000|
+DIVISOR<8>  |    6.279(R)|   -3.917(R)|CLK_BUFGP         |   0.000|
+DIVISOR<9>  |    6.003(R)|   -3.696(R)|CLK_BUFGP         |   0.000|
+DIVISOR<10> |    5.863(R)|   -3.583(R)|CLK_BUFGP         |   0.000|
+DIVISOR<11> |    5.674(R)|   -3.432(R)|CLK_BUFGP         |   0.000|
+DIVISOR<12> |    5.661(R)|   -3.422(R)|CLK_BUFGP         |   0.000|
+DIVISOR<13> |    5.682(R)|   -3.439(R)|CLK_BUFGP         |   0.000|
+DIVISOR<14> |    5.552(R)|   -3.334(R)|CLK_BUFGP         |   0.000|
+DIVISOR<15> |    5.454(R)|   -3.256(R)|CLK_BUFGP         |   0.000|
+DIVISOR<16> |    5.139(R)|   -3.004(R)|CLK_BUFGP         |   0.000|
+DIVISOR<17> |    5.026(R)|   -2.914(R)|CLK_BUFGP         |   0.000|
+DIVISOR<18> |    5.650(R)|   -3.413(R)|CLK_BUFGP         |   0.000|
+DIVISOR<19> |    5.266(R)|   -3.106(R)|CLK_BUFGP         |   0.000|
+DIVISOR<20> |    5.027(R)|   -2.914(R)|CLK_BUFGP         |   0.000|
+DIVISOR<21> |    5.631(R)|   -3.398(R)|CLK_BUFGP         |   0.000|
+DIVISOR<22> |    5.166(R)|   -3.026(R)|CLK_BUFGP         |   0.000|
+DIVISOR<23> |    5.977(R)|   -3.674(R)|CLK_BUFGP         |   0.000|
+DIVISOR<24> |    5.191(R)|   -3.045(R)|CLK_BUFGP         |   0.000|
+DIVISOR<25> |    5.273(R)|   -3.111(R)|CLK_BUFGP         |   0.000|
+DIVISOR<26> |    5.375(R)|   -3.193(R)|CLK_BUFGP         |   0.000|
+DIVISOR<27> |    5.560(R)|   -3.340(R)|CLK_BUFGP         |   0.000|
+DIVISOR<28> |    5.482(R)|   -3.278(R)|CLK_BUFGP         |   0.000|
+DIVISOR<29> |    5.589(R)|   -3.363(R)|CLK_BUFGP         |   0.000|
+DIVISOR<30> |    5.504(R)|   -3.296(R)|CLK_BUFGP         |   0.000|
+DIVISOR<31> |    5.228(R)|   -3.075(R)|CLK_BUFGP         |   0.000|
+LOAD        |    2.994(R)|   -0.441(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -84,8 +84,8 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-EN          |    9.628(R)|CLK_BUFGP         |   0.000|
-EOC         |   10.056(R)|CLK_BUFGP         |   0.000|
+EN          |   10.595(R)|CLK_BUFGP         |   0.000|
+EOC         |   10.554(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -93,90 +93,90 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    3.729|         |         |         |
+CLK            |    2.796|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-CARRY          |LD_SH          |    5.790|
-DIVIDEND<0>    |EN             |   11.234|
-DIVIDEND<0>    |ERROR          |    9.284|
-DIVIDEND<1>    |EN             |   11.176|
-DIVIDEND<1>    |ERROR          |    9.226|
-DIVIDEND<2>    |EN             |   11.396|
-DIVIDEND<2>    |ERROR          |    9.446|
-DIVIDEND<3>    |EN             |   11.207|
-DIVIDEND<3>    |ERROR          |    9.257|
-DIVIDEND<4>    |EN             |   11.443|
-DIVIDEND<4>    |ERROR          |    9.493|
-DIVIDEND<5>    |EN             |   11.026|
-DIVIDEND<5>    |ERROR          |    9.076|
-DIVIDEND<6>    |EN             |   10.796|
-DIVIDEND<6>    |ERROR          |    8.846|
-DIVIDEND<7>    |EN             |   11.137|
-DIVIDEND<7>    |ERROR          |    9.187|
-DIVIDEND<8>    |EN             |   11.212|
-DIVIDEND<8>    |ERROR          |    9.262|
-DIVIDEND<9>    |EN             |   11.168|
-DIVIDEND<9>    |ERROR          |    9.218|
-DIVIDEND<10>   |EN             |   11.048|
-DIVIDEND<10>   |ERROR          |    9.098|
-DIVIDEND<11>   |EN             |   11.009|
-DIVIDEND<11>   |ERROR          |    9.059|
-DIVIDEND<12>   |EN             |   11.432|
-DIVIDEND<12>   |ERROR          |    9.482|
-DIVIDEND<13>   |EN             |   11.000|
-DIVIDEND<13>   |ERROR          |    9.050|
-DIVIDEND<14>   |EN             |   10.918|
-DIVIDEND<14>   |ERROR          |    8.968|
-DIVIDEND<15>   |EN             |   11.083|
-DIVIDEND<15>   |ERROR          |    9.133|
-DIVIDEND<16>   |EN             |   10.326|
-DIVIDEND<16>   |ERROR          |    8.376|
-DIVIDEND<17>   |EN             |   11.331|
-DIVIDEND<17>   |ERROR          |    9.381|
-DIVIDEND<18>   |EN             |   10.608|
-DIVIDEND<18>   |ERROR          |    8.658|
-DIVIDEND<19>   |EN             |   10.366|
-DIVIDEND<19>   |ERROR          |    8.416|
-DIVIDEND<20>   |EN             |   10.971|
-DIVIDEND<20>   |ERROR          |    9.021|
-DIVIDEND<21>   |EN             |   10.218|
-DIVIDEND<21>   |ERROR          |    8.268|
-DIVIDEND<22>   |EN             |   11.101|
-DIVIDEND<22>   |ERROR          |    9.151|
-DIVIDEND<23>   |EN             |   11.215|
-DIVIDEND<23>   |ERROR          |    9.265|
-DIVIDEND<24>   |EN             |   11.065|
-DIVIDEND<24>   |ERROR          |    9.115|
-DIVIDEND<25>   |EN             |   10.860|
-DIVIDEND<25>   |ERROR          |    8.910|
-DIVIDEND<26>   |EN             |   10.271|
-DIVIDEND<26>   |ERROR          |    8.321|
-DIVIDEND<27>   |EN             |   10.665|
-DIVIDEND<27>   |ERROR          |    8.715|
-DIVIDEND<28>   |EN             |   10.097|
-DIVIDEND<28>   |ERROR          |    8.147|
-DIVIDEND<29>   |EN             |   10.423|
-DIVIDEND<29>   |ERROR          |    8.473|
-DIVIDEND<30>   |EN             |   11.142|
-DIVIDEND<30>   |ERROR          |    9.192|
-DIVIDEND<31>   |EN             |   10.966|
-DIVIDEND<31>   |ERROR          |    9.016|
-LOAD           |EN             |    8.302|
+CARRY          |LD_SH          |    6.383|
+DIVISOR<0>     |EN             |   13.643|
+DIVISOR<0>     |ERROR          |    9.163|
+DIVISOR<1>     |EN             |   14.360|
+DIVISOR<1>     |ERROR          |    9.880|
+DIVISOR<2>     |EN             |   13.880|
+DIVISOR<2>     |ERROR          |    9.400|
+DIVISOR<3>     |EN             |   13.794|
+DIVISOR<3>     |ERROR          |    9.314|
+DIVISOR<4>     |EN             |   13.825|
+DIVISOR<4>     |ERROR          |    9.345|
+DIVISOR<5>     |EN             |   13.587|
+DIVISOR<5>     |ERROR          |    9.107|
+DIVISOR<6>     |EN             |   13.704|
+DIVISOR<6>     |ERROR          |    9.224|
+DIVISOR<7>     |EN             |   13.704|
+DIVISOR<7>     |ERROR          |    9.224|
+DIVISOR<8>     |EN             |   13.743|
+DIVISOR<8>     |ERROR          |    9.263|
+DIVISOR<9>     |EN             |   13.467|
+DIVISOR<9>     |ERROR          |    8.987|
+DIVISOR<10>    |EN             |   13.327|
+DIVISOR<10>    |ERROR          |    8.847|
+DIVISOR<11>    |EN             |   13.138|
+DIVISOR<11>    |ERROR          |    8.658|
+DIVISOR<12>    |EN             |   13.125|
+DIVISOR<12>    |ERROR          |    8.645|
+DIVISOR<13>    |EN             |   13.146|
+DIVISOR<13>    |ERROR          |    8.666|
+DIVISOR<14>    |EN             |   13.016|
+DIVISOR<14>    |ERROR          |    8.536|
+DIVISOR<15>    |EN             |   12.918|
+DIVISOR<15>    |ERROR          |    8.438|
+DIVISOR<16>    |EN             |   12.603|
+DIVISOR<16>    |ERROR          |    8.123|
+DIVISOR<17>    |EN             |   12.490|
+DIVISOR<17>    |ERROR          |    8.010|
+DIVISOR<18>    |EN             |   13.114|
+DIVISOR<18>    |ERROR          |    8.634|
+DIVISOR<19>    |EN             |   12.730|
+DIVISOR<19>    |ERROR          |    8.250|
+DIVISOR<20>    |EN             |   12.491|
+DIVISOR<20>    |ERROR          |    8.011|
+DIVISOR<21>    |EN             |   13.095|
+DIVISOR<21>    |ERROR          |    8.615|
+DIVISOR<22>    |EN             |   12.630|
+DIVISOR<22>    |ERROR          |    8.150|
+DIVISOR<23>    |EN             |   13.441|
+DIVISOR<23>    |ERROR          |    8.961|
+DIVISOR<24>    |EN             |   12.655|
+DIVISOR<24>    |ERROR          |    8.175|
+DIVISOR<25>    |EN             |   12.737|
+DIVISOR<25>    |ERROR          |    8.257|
+DIVISOR<26>    |EN             |   12.839|
+DIVISOR<26>    |ERROR          |    8.359|
+DIVISOR<27>    |EN             |   13.024|
+DIVISOR<27>    |ERROR          |    8.544|
+DIVISOR<28>    |EN             |   12.946|
+DIVISOR<28>    |ERROR          |    8.466|
+DIVISOR<29>    |EN             |   13.053|
+DIVISOR<29>    |ERROR          |    8.573|
+DIVISOR<30>    |EN             |   12.968|
+DIVISOR<30>    |ERROR          |    8.488|
+DIVISOR<31>    |EN             |   12.692|
+DIVISOR<31>    |ERROR          |    8.212|
+LOAD           |EN             |   10.458|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon May 03 18:31:24 2021 
+Analysis completed Sun May 09 16:29:42 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4488 MB
+Peak Memory Usage: 4518 MB
 
 
 

@@ -20,7 +20,7 @@ architecture RTL of CU is
 
 	component Counter is
 		generic(
-			n:	integer:=5
+			n:	integer:=6
 		);
 		port(
 			CLK:		in		std_logic;
@@ -31,7 +31,7 @@ architecture RTL of CU is
 	end component;
 	
 	signal INTERNAL_EN:		std_logic;
-	signal INTERNAL_RESULT:	std_logic_vector(4 downto 0);
+	signal INTERNAL_RESULT:	std_logic_vector(5 downto 0);
 	signal INTERNAL_ERROR:	std_logic;
 	signal INTERNAL_EOC:		std_logic;
 begin
@@ -39,29 +39,29 @@ begin
 	INTERNAL_ERROR	<=	'1' when DIVISOR="11111111111111111111111111111111" else
 							'0';
 
-	INTERNAL_EOC	<=	'1' when INTERNAL_RESULT="11111" else
+	INTERNAL_EOC	<=	'1' when INTERNAL_RESULT(5)='1' else
 							'0';
 	
 	INTERNAL_EN		<=	((not INTERNAL_EOC) and (not INTERNAL_ERROR))  OR LOAD;
 
 	
-	counter_5:Counter
-		generic map(n=>5)
+	counter_6:Counter
+		generic map(n=>6)
 		port map(
 			CLK=>CLK,
 			RESET=>LOAD,
 			EN=>INTERNAL_EN,
 			RESULT=>INTERNAL_RESULT
 		);
+		
+
+	LD_SH				<=	CARRY;
 	
+	EN					<=	INTERNAL_EN;	
 	
-	LD_SH		<=	CARRY;
+	ERROR				<=	INTERNAL_ERROR;
 	
-	EN			<=	INTERNAL_EN;	
-	
-	ERROR		<=	INTERNAL_ERROR;
-	
-	EOC		<=	INTERNAL_EOC;
+	EOC				<=	INTERNAL_EOC;
 	
 
 end RTL;

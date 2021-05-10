@@ -36,7 +36,7 @@ ARCHITECTURE behavior OF CU_TB IS
    signal ERROR : std_logic;
 
    -- Clock period definitions
-   constant CLK_period : time := 10 ns;
+   constant CLK_period : time := 30 ns;
  
 BEGIN
  
@@ -68,27 +68,42 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-		-- check if EN is set to 1
+		-- Set EN='1'
 		LOAD<='1';
 		wait for CLK_period;
 		LOAD<='0';
+		-- Wait until EOC='1' and then EN='0'
+		wait for CLK_period*33;
 		
-		wait for CLK_period*40;
-		
-		-- check if EN is reset to 0
+		-- Reset EN by reload and execute some count
 		LOAD<='1';
 		wait for CLK_period;
 		LOAD<='0';
+		wait for CLK_period*15;
 		
-		
-		-- check if ERROR become 0 and EN =0 and then be resetted with LOAD=1
-		wait for CLK_period*2;
+		-- Reset Counter and make ERR='1'
+		LOAD<='1';
 		DIVISOR<=(others=>'1');
-		wait for CLK_period*2;
+		wait for CLK_period;
+		LOAD<='0';
+		wait for CLK_period*3;
+		
+		-- Reset EN
 		LOAD<='1';
 		wait for CLK_period;
+		LOAD<='0';
+		wait for CLK_period;
 		
+		-- test carry
+		CARRY<='1';
+		wait for CLK_period;
+		CARRY<='0';
+		wait for CLK_period;
       wait;
+		
+		-- Load -> EOC 10ns
+		-- CLK_Edge -> PAD (EOC) 10ns
+		-- Dividend -> Error 9.5 ns 
    end process;
 
 END;

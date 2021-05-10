@@ -48,31 +48,31 @@ LAB4:    goto LAB2;
 }
 
 
-extern void simprim_a_3395610110_2220797900_2047307652_init()
+extern void simprim_a_3395610110_2220797900_0049256412_init()
 {
 	static char *pe[] = {(void *)simprim_a_3395610110_2220797900_p_0};
-	xsi_register_didat("simprim_a_3395610110_2220797900_2047307652", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_2047307652.didat");
+	xsi_register_didat("simprim_a_3395610110_2220797900_0049256412", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_0049256412.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprim_a_3395610110_2220797900_2076509619_init()
+extern void simprim_a_3395610110_2220797900_0023806898_init()
 {
 	static char *pe[] = {(void *)simprim_a_3395610110_2220797900_p_0};
-	xsi_register_didat("simprim_a_3395610110_2220797900_2076509619", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_2076509619.didat");
+	xsi_register_didat("simprim_a_3395610110_2220797900_0023806898", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_0023806898.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprim_a_3395610110_2220797900_2038676458_init()
+extern void simprim_a_3395610110_2220797900_0011086213_init()
 {
 	static char *pe[] = {(void *)simprim_a_3395610110_2220797900_p_0};
-	xsi_register_didat("simprim_a_3395610110_2220797900_2038676458", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_2038676458.didat");
+	xsi_register_didat("simprim_a_3395610110_2220797900_0011086213", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_0011086213.didat");
 	xsi_register_executes(pe);
 }
 
-extern void simprim_a_3395610110_2220797900_2017579485_init()
+extern void simprim_a_3395610110_2220797900_0053345771_init()
 {
 	static char *pe[] = {(void *)simprim_a_3395610110_2220797900_p_0};
-	xsi_register_didat("simprim_a_3395610110_2220797900_2017579485", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_2017579485.didat");
+	xsi_register_didat("simprim_a_3395610110_2220797900_0053345771", "isim/CU_TB_isim_par.exe.sim/simprim/a_3395610110_2220797900_0053345771.didat");
 	xsi_register_executes(pe);
 }
 

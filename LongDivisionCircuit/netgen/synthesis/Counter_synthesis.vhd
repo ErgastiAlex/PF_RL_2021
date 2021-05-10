@@ -7,12 +7,12 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: Counter_synthesis.vhd
--- /___/   /\     Timestamp: Mon May 03 16:48:57 2021
+-- /___/   /\     Timestamp: Sat May 08 17:41:05 2021
 -- \   \  /  \ 
 --  \___\/\___\
 --             
 -- Command	: -intstyle ise -ar Structure -tm Counter -w -dir netgen/synthesis -ofmt vhdl -sim Counter.ngc Counter_synthesis.vhd 
--- Device	: xc3s200-5-pq208
+-- Device	: xc3s1500-5-fg320
 -- Input file	: Counter.ngc
 -- Output file	: C:\Users\Alex\Documents\PF_RL_2021\LongDivisionCircuit\netgen\synthesis\Counter_synthesis.vhd
 -- # of Entities	: 1
@@ -43,69 +43,79 @@ entity Counter is
     CLK : in STD_LOGIC := 'X'; 
     EN : in STD_LOGIC := 'X'; 
     RESET : in STD_LOGIC := 'X'; 
-    RESULT : out STD_LOGIC_VECTOR ( 4 downto 0 ) 
+    RESULT : out STD_LOGIC_VECTOR ( 5 downto 0 ) 
   );
 end Counter;
 
 architecture Structure of Counter is
   signal CLK_BUFGP_1 : STD_LOGIC; 
   signal EN_IBUF_3 : STD_LOGIC; 
-  signal RESET_IBUF_10 : STD_LOGIC; 
-  signal reg_reg_gen_0_ffd_Q_17 : STD_LOGIC; 
-  signal reg_reg_gen_1_ffd_Q_18 : STD_LOGIC; 
-  signal reg_reg_gen_2_ffd_Q_19 : STD_LOGIC; 
-  signal reg_reg_gen_3_ffd_Q_20 : STD_LOGIC; 
-  signal reg_reg_gen_4_ffd_Q_21 : STD_LOGIC; 
-  signal RCA_RESULT : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal adder_C_INTERNAL : STD_LOGIC_VECTOR ( 3 downto 3 ); 
+  signal N0 : STD_LOGIC; 
+  signal RESET_IBUF_12 : STD_LOGIC; 
+  signal reg_reg_gen_0_ffd_Q_20 : STD_LOGIC; 
+  signal reg_reg_gen_1_ffd_Q_21 : STD_LOGIC; 
+  signal reg_reg_gen_2_ffd_Q_22 : STD_LOGIC; 
+  signal reg_reg_gen_3_ffd_Q_23 : STD_LOGIC; 
+  signal reg_reg_gen_4_ffd_Q_24 : STD_LOGIC; 
+  signal reg_reg_gen_5_ffd_Q_25 : STD_LOGIC; 
+  signal RCA_RESULT : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal adder_C_INTERNAL : STD_LOGIC_VECTOR ( 4 downto 4 ); 
 begin
   reg_reg_gen_0_ffd_Q : FDRE
     port map (
       C => CLK_BUFGP_1,
       CE => EN_IBUF_3,
       D => RCA_RESULT(0),
-      R => RESET_IBUF_10,
-      Q => reg_reg_gen_0_ffd_Q_17
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_0_ffd_Q_20
     );
   reg_reg_gen_1_ffd_Q : FDRE
     port map (
       C => CLK_BUFGP_1,
       CE => EN_IBUF_3,
       D => RCA_RESULT(1),
-      R => RESET_IBUF_10,
-      Q => reg_reg_gen_1_ffd_Q_18
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_1_ffd_Q_21
     );
   reg_reg_gen_2_ffd_Q : FDRE
     port map (
       C => CLK_BUFGP_1,
       CE => EN_IBUF_3,
       D => RCA_RESULT(2),
-      R => RESET_IBUF_10,
-      Q => reg_reg_gen_2_ffd_Q_19
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_2_ffd_Q_22
     );
   reg_reg_gen_3_ffd_Q : FDRE
     port map (
       C => CLK_BUFGP_1,
       CE => EN_IBUF_3,
       D => RCA_RESULT(3),
-      R => RESET_IBUF_10,
-      Q => reg_reg_gen_3_ffd_Q_20
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_3_ffd_Q_23
     );
   reg_reg_gen_4_ffd_Q : FDRE
     port map (
       C => CLK_BUFGP_1,
       CE => EN_IBUF_3,
       D => RCA_RESULT(4),
-      R => RESET_IBUF_10,
-      Q => reg_reg_gen_4_ffd_Q_21
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_4_ffd_Q_24
+    );
+  reg_reg_gen_5_ffd_Q : FDRE
+    port map (
+      C => CLK_BUFGP_1,
+      CE => EN_IBUF_3,
+      D => RCA_RESULT(5),
+      R => RESET_IBUF_12,
+      Q => reg_reg_gen_5_ffd_Q_25
     );
   adder_rca_1_fa_i_Mxor_S_xo_0_1 : LUT2
     generic map(
       INIT => X"6"
     )
     port map (
-      I0 => reg_reg_gen_0_ffd_Q_17,
-      I1 => reg_reg_gen_1_ffd_Q_18,
+      I0 => reg_reg_gen_0_ffd_Q_20,
+      I1 => reg_reg_gen_1_ffd_Q_21,
       O => RCA_RESULT(1)
     );
   adder_rca_2_fa_i_Mxor_S_xo_0_1 : LUT3
@@ -113,20 +123,40 @@ begin
       INIT => X"6A"
     )
     port map (
-      I0 => reg_reg_gen_2_ffd_Q_19,
-      I1 => reg_reg_gen_1_ffd_Q_18,
-      I2 => reg_reg_gen_0_ffd_Q_17,
+      I0 => reg_reg_gen_2_ffd_Q_22,
+      I1 => reg_reg_gen_1_ffd_Q_21,
+      I2 => reg_reg_gen_0_ffd_Q_20,
       O => RCA_RESULT(2)
     );
-  adder_rca_4_fa_i_Mxor_S_xo_0_1 : LUT3
+  adder_rca_3_fa_i_Mxor_S_xo_0_1 : LUT4
+    generic map(
+      INIT => X"6CCC"
+    )
+    port map (
+      I0 => reg_reg_gen_0_ffd_Q_20,
+      I1 => reg_reg_gen_3_ffd_Q_23,
+      I2 => reg_reg_gen_1_ffd_Q_21,
+      I3 => reg_reg_gen_2_ffd_Q_22,
+      O => RCA_RESULT(3)
+    );
+  adder_rca_4_fa_i_Mxor_S_xo_0_1 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => reg_reg_gen_4_ffd_Q_24,
+      I1 => N0,
+      O => RCA_RESULT(4)
+    );
+  adder_rca_5_fa_i_Mxor_S_xo_0_1 : LUT3
     generic map(
       INIT => X"6A"
     )
     port map (
-      I0 => reg_reg_gen_4_ffd_Q_21,
-      I1 => reg_reg_gen_3_ffd_Q_20,
-      I2 => adder_C_INTERNAL(3),
-      O => RCA_RESULT(4)
+      I0 => reg_reg_gen_5_ffd_Q_25,
+      I1 => reg_reg_gen_4_ffd_Q_24,
+      I2 => adder_C_INTERNAL(4),
+      O => RCA_RESULT(5)
     );
   EN_IBUF : IBUF
     port map (
@@ -136,43 +166,37 @@ begin
   RESET_IBUF : IBUF
     port map (
       I => RESET,
-      O => RESET_IBUF_10
+      O => RESET_IBUF_12
+    );
+  RESULT_5_OBUF : OBUF
+    port map (
+      I => reg_reg_gen_5_ffd_Q_25,
+      O => RESULT(5)
     );
   RESULT_4_OBUF : OBUF
     port map (
-      I => reg_reg_gen_4_ffd_Q_21,
+      I => reg_reg_gen_4_ffd_Q_24,
       O => RESULT(4)
     );
   RESULT_3_OBUF : OBUF
     port map (
-      I => reg_reg_gen_3_ffd_Q_20,
+      I => reg_reg_gen_3_ffd_Q_23,
       O => RESULT(3)
     );
   RESULT_2_OBUF : OBUF
     port map (
-      I => reg_reg_gen_2_ffd_Q_19,
+      I => reg_reg_gen_2_ffd_Q_22,
       O => RESULT(2)
     );
   RESULT_1_OBUF : OBUF
     port map (
-      I => reg_reg_gen_1_ffd_Q_18,
+      I => reg_reg_gen_1_ffd_Q_21,
       O => RESULT(1)
     );
   RESULT_0_OBUF : OBUF
     port map (
-      I => reg_reg_gen_0_ffd_Q_17,
+      I => reg_reg_gen_0_ffd_Q_20,
       O => RESULT(0)
-    );
-  adder_rca_3_fa_i_Mxor_S_xo_0_1 : LUT4
-    generic map(
-      INIT => X"6AAA"
-    )
-    port map (
-      I0 => reg_reg_gen_3_ffd_Q_20,
-      I1 => reg_reg_gen_2_ffd_Q_19,
-      I2 => reg_reg_gen_1_ffd_Q_18,
-      I3 => reg_reg_gen_0_ffd_Q_17,
-      O => RCA_RESULT(3)
     );
   CLK_BUFGP : BUFGP
     port map (
@@ -181,18 +205,20 @@ begin
     );
   adder_rca_0_fa_i_Mxor_S_xo_0_1_INV_0 : INV
     port map (
-      I => reg_reg_gen_0_ffd_Q_17,
+      I => reg_reg_gen_0_ffd_Q_20,
       O => RCA_RESULT(0)
     );
-  adder_rca_2_fa_i_COUT_and00011 : LUT3_L
+  adder_rca_3_fa_i_COUT_and00011 : LUT4_D
     generic map(
-      INIT => X"80"
+      INIT => X"8000"
     )
     port map (
-      I0 => reg_reg_gen_2_ffd_Q_19,
-      I1 => reg_reg_gen_1_ffd_Q_18,
-      I2 => reg_reg_gen_0_ffd_Q_17,
-      LO => adder_C_INTERNAL(3)
+      I0 => reg_reg_gen_3_ffd_Q_23,
+      I1 => reg_reg_gen_2_ffd_Q_22,
+      I2 => reg_reg_gen_1_ffd_Q_21,
+      I3 => reg_reg_gen_0_ffd_Q_20,
+      LO => N0,
+      O => adder_C_INTERNAL(4)
     );
 
 end Structure;

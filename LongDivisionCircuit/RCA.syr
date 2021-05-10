@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.10 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: RCA.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "RCA"
 Output Format                      : NGC
-Target Device                      : xc3s200-5-pq208
+Target Device                      : xc3s1500-5-fg320
 
 ---- Source Options
 Top Module Name                    : RCA
@@ -68,7 +68,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 100000
+Global Maximum Fanout              : 500
 Add Generic Clock Buffer(BUFG)     : 8
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -179,7 +179,7 @@ Optimizing unit <RCA> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block RCA, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block RCA, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -224,12 +224,12 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s200pq208-5 
+Selected Device : 3s1500fg320-5 
 
- Number of Slices:                       37  out of   1920     1%  
- Number of 4 input LUTs:                 64  out of   3840     1%  
+ Number of Slices:                       37  out of  13312     0%  
+ Number of 4 input LUTs:                 64  out of  26624     0%  
  Number of IOs:                          98
- Number of bonded IOBs:                  98  out of    141    69%  
+ Number of bonded IOBs:                  98  out of    221    44%  
 
 ---------------------------
 Partition Resource Summary:
@@ -322,11 +322,11 @@ Delay:               47.847ns (Levels of Logic = 34)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.27 secs
+Total CPU time to Xst completion: 4.44 secs
  
 --> 
 
-Total memory usage is 4513220 kilobytes
+Total memory usage is 4513204 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

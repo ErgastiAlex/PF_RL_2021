@@ -1,0 +1,31 @@
+Command line:
+   Reg_PP_TB_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/Reg_PP_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  65521
+
+Sun May 09 17:10:16 2021
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5162.58 Meg
+
+ Total Signals          : 2009
+ Total Nets             : 1341
+ Total Signal Drivers   : 1286
+ Total Blocks           : 572
+ Total Primitive Blocks : 306
+ Total Processes        : 1285
+ Total Traceable Variables  : 3165
+ Total Scalar Nets and Variables : 11472
+Total Line Count : 5029
+
+ Total Simulation Time: 0.21875 sec
+
+ Current Memory Usage: 5477.15 Meg
+
+Sun May 09 17:11:09 2021
+

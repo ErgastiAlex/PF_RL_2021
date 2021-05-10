@@ -7,12 +7,12 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: RegShifter_PS_synthesis.vhd
--- /___/   /\     Timestamp: Mon May 03 15:55:30 2021
+-- /___/   /\     Timestamp: Sat May 08 15:53:54 2021
 -- \   \  /  \ 
 --  \___\/\___\
 --             
 -- Command	: -intstyle ise -ar Structure -tm RegShifter_PS -w -dir netgen/synthesis -ofmt vhdl -sim RegShifter_PS.ngc RegShifter_PS_synthesis.vhd 
--- Device	: xc3s200-5-pq208
+-- Device	: xc3s1500-5-fg320
 -- Input file	: RegShifter_PS.ngc
 -- Output file	: C:\Users\Alex\Documents\PF_RL_2021\LongDivisionCircuit\netgen\synthesis\RegShifter_PS_synthesis.vhd
 -- # of Entities	: 1

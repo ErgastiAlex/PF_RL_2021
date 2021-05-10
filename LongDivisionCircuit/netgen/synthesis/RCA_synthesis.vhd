@@ -7,12 +7,12 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: RCA_synthesis.vhd
--- /___/   /\     Timestamp: Mon May 03 15:59:43 2021
+-- /___/   /\     Timestamp: Sat May 08 17:45:06 2021
 -- \   \  /  \ 
 --  \___\/\___\
 --             
 -- Command	: -intstyle ise -ar Structure -tm RCA -w -dir netgen/synthesis -ofmt vhdl -sim RCA.ngc RCA_synthesis.vhd 
--- Device	: xc3s200-5-pq208
+-- Device	: xc3s1500-5-fg320
 -- Input file	: RCA.ngc
 -- Output file	: C:\Users\Alex\Documents\PF_RL_2021\LongDivisionCircuit\netgen\synthesis\RCA_synthesis.vhd
 -- # of Entities	: 1

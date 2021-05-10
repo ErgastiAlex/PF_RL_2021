@@ -65,32 +65,51 @@ BEGIN
    stim_proc: process
    begin		
 
-		PI<="11001100110010100000111111110011";
-		SI<='0';
-		EN<='1';
+		RESET<='1';
       wait for 100 ns;	
+		RESET<='0';
 		
-		-- parallel load
+		-- parallel load with EN=0
+		PI<=(others=>'1');
+		SI<='1';
 		LD_SH<='1';
 		wait for CLK_period;
 		
-		--shift for 24 bit
-		LD_SH<='0';
-		
-      wait for CLK_period*24;
-		PI<="11111111111111111111111111111111";
-		SI<='0';
-		
-		--parallel load
-		LD_SH<='1';
+		-- parallel load with EN=1
+		PI<=(0=>'0',others=>'1');
+		EN<='1';
 		wait for CLK_period;
-		LD_SH<='0';
-			
-		wait for CLK_period*10;
-		LD_SH<='0';
+		
+		-- shift with EN=0
 		EN<='0';
+		LD_SH<='0';
+		wait for CLK_period;
+		
+		-- shift with EN=1 (SI=1)
+		EN<='1';
+		wait for CLK_period;
+				
+		-- shift with EN=1 (SI=0)
+		SI<='0';
+		wait for CLK_period;
+		
+		-- Reset with EN=0
+		RESET<='1';
+		EN<='0';
+		wait for CLK_period;		
+		RESET<='0';
+
+		
+		-- random pi
+		PI<="10000011000000001000101100011011";
+		EN<='1';
+		LD_SH<='1';
+		wait for CLK_period;
+		LD_SH<='0';
 
       wait;
+		
+		--Time CLK_edge to Pad=13,149 ns => 20ns
    end process;
 
 END;

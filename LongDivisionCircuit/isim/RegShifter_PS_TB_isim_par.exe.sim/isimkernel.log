@@ -1,0 +1,31 @@
+Command line:
+   RegShifter_PS_TB_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/RegShifter_PS_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  65528
+
+Sun May 09 17:11:29 2021
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 5162.55 Meg
+
+ Total Signals          : 2381
+ Total Nets             : 1551
+ Total Signal Drivers   : 1496
+ Total Blocks           : 630
+ Total Primitive Blocks : 336
+ Total Processes        : 1493
+ Total Traceable Variables  : 3604
+ Total Scalar Nets and Variables : 14532
+Total Line Count : 5310
+
+ Total Simulation Time: 0.34375 sec
+
+ Current Memory Usage: 5005.26 Meg
+
+Sun May 09 17:13:39 2021
+

@@ -1,0 +1,2 @@
+vhdl isim_temp "netgen/par/LongDivisionCircuit_timesim.vhd"
+vhdl isim_temp "LongDivisionCircuit_TB.vhd"

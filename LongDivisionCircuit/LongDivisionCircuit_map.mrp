@@ -3,34 +3,34 @@ Xilinx Mapping Report File for Design 'LongDivisionCircuit'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off
+Command Line   : map -intstyle ise -p xc3s1500-fg320-5 -cm area -ir off -pr off
 -c 100 -o LongDivisionCircuit_map.ncd LongDivisionCircuit.ngd
 LongDivisionCircuit.pcf 
-Target Device  : xc3s200
-Target Package : pq208
+Target Device  : xc3s1500
+Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Mon May 03 19:31:56 2021
+Mapped Date    : Sat May 08 17:52:05 2021
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           101 out of   3,840    2%
-  Number of 4 input LUTs:               185 out of   3,840    4%
+  Number of Slice Flip Flops:           102 out of  26,624    1%
+  Number of 4 input LUTs:               189 out of  26,624    1%
 Logic Distribution:
-  Number of occupied Slices:            128 out of   1,920    6%
-    Number of Slices containing only related logic:     128 out of     128 100%
-    Number of Slices containing unrelated logic:          0 out of     128   0%
+  Number of occupied Slices:            147 out of  13,312    1%
+    Number of Slices containing only related logic:     147 out of     147 100%
+    Number of Slices containing unrelated logic:          0 out of     147   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         185 out of   3,840    4%
-  Number of bonded IOBs:                132 out of     141   93%
+  Total Number of 4 input LUTs:         189 out of  26,624    1%
+  Number of bonded IOBs:                132 out of     221   59%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                3.28
+Average Fanout of Non-Clock Nets:                3.33
 
-Peak Memory Usage:  4385 MB
+Peak Memory Usage:  4407 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 

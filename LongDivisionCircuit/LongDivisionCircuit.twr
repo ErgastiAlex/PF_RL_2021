@@ -8,7 +8,7 @@ LongDivisionCircuit.twr LongDivisionCircuit.pcf
 
 Design file:              LongDivisionCircuit.ncd
 Physical constraint file: LongDivisionCircuit.pcf
-Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Device,package,speed:     xc3s1500,fg320,-5 (PRODUCTION 1.39 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -45,71 +45,71 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-DIVIDEND<0> |    1.466(R)|    0.103(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<1> |    2.209(R)|   -0.491(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<2> |    0.843(R)|    0.601(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<3> |    1.347(R)|    0.199(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<4> |    1.201(R)|    0.315(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<5> |    1.288(R)|    0.247(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<6> |    1.404(R)|    0.153(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<7> |    1.288(R)|    0.246(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<8> |    1.107(R)|    0.390(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<9> |    1.841(R)|   -0.197(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<10>|    1.542(R)|    0.042(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<11>|    0.945(R)|    0.519(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<12>|    1.331(R)|    0.211(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<13>|    1.466(R)|    0.103(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<14>|    1.757(R)|   -0.130(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<15>|    0.943(R)|    0.522(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<16>|    1.532(R)|    0.050(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<17>|    0.781(R)|    0.651(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<18>|    0.766(R)|    0.663(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<19>|    1.463(R)|    0.105(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<20>|    1.329(R)|    0.212(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<21>|    1.148(R)|    0.357(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<22>|    1.176(R)|    0.335(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<23>|    1.335(R)|    0.208(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<24>|    1.108(R)|    0.389(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<25>|    1.114(R)|    0.385(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<26>|    0.853(R)|    0.593(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<27>|    1.735(R)|   -0.112(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<28>|    1.318(R)|    0.222(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<29>|    1.664(R)|   -0.055(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<30>|    2.008(R)|   -0.331(R)|CLK_BUFGP         |   0.000|
-DIVIDEND<31>|    1.415(R)|    0.144(R)|CLK_BUFGP         |   0.000|
-DIVISOR<0>  |   10.462(R)|    0.097(R)|CLK_BUFGP         |   0.000|
-DIVISOR<1>  |    9.870(R)|    0.018(R)|CLK_BUFGP         |   0.000|
-DIVISOR<2>  |    9.709(R)|   -0.384(R)|CLK_BUFGP         |   0.000|
-DIVISOR<3>  |    8.670(R)|    0.431(R)|CLK_BUFGP         |   0.000|
-DIVISOR<4>  |    8.317(R)|    0.275(R)|CLK_BUFGP         |   0.000|
-DIVISOR<5>  |    8.160(R)|    0.352(R)|CLK_BUFGP         |   0.000|
-DIVISOR<6>  |    8.473(R)|   -0.118(R)|CLK_BUFGP         |   0.000|
-DIVISOR<7>  |    8.612(R)|   -0.712(R)|CLK_BUFGP         |   0.000|
-DIVISOR<8>  |    9.032(R)|   -0.706(R)|CLK_BUFGP         |   0.000|
-DIVISOR<9>  |    9.322(R)|   -0.310(R)|CLK_BUFGP         |   0.000|
-DIVISOR<10> |    9.206(R)|   -0.332(R)|CLK_BUFGP         |   0.000|
-DIVISOR<11> |    8.655(R)|    0.658(R)|CLK_BUFGP         |   0.000|
-DIVISOR<12> |    8.978(R)|    0.645(R)|CLK_BUFGP         |   0.000|
-DIVISOR<13> |    9.693(R)|   -0.138(R)|CLK_BUFGP         |   0.000|
-DIVISOR<14> |    8.764(R)|    0.658(R)|CLK_BUFGP         |   0.000|
-DIVISOR<15> |    8.968(R)|    0.035(R)|CLK_BUFGP         |   0.000|
-DIVISOR<16> |    9.675(R)|    0.595(R)|CLK_BUFGP         |   0.000|
-DIVISOR<17> |    8.494(R)|    0.037(R)|CLK_BUFGP         |   0.000|
-DIVISOR<18> |    8.698(R)|    0.271(R)|CLK_BUFGP         |   0.000|
-DIVISOR<19> |    9.943(R)|   -1.081(R)|CLK_BUFGP         |   0.000|
-DIVISOR<20> |    9.601(R)|   -0.596(R)|CLK_BUFGP         |   0.000|
-DIVISOR<21> |    9.325(R)|   -0.629(R)|CLK_BUFGP         |   0.000|
-DIVISOR<22> |    9.751(R)|   -0.673(R)|CLK_BUFGP         |   0.000|
-DIVISOR<23> |    9.468(R)|   -0.557(R)|CLK_BUFGP         |   0.000|
-DIVISOR<24> |    8.807(R)|   -0.307(R)|CLK_BUFGP         |   0.000|
-DIVISOR<25> |    9.580(R)|   -0.068(R)|CLK_BUFGP         |   0.000|
-DIVISOR<26> |    8.848(R)|    0.122(R)|CLK_BUFGP         |   0.000|
-DIVISOR<27> |    8.704(R)|    0.320(R)|CLK_BUFGP         |   0.000|
-DIVISOR<28> |    8.752(R)|    0.985(R)|CLK_BUFGP         |   0.000|
-DIVISOR<29> |    8.576(R)|    0.507(R)|CLK_BUFGP         |   0.000|
-DIVISOR<30> |    8.823(R)|    0.468(R)|CLK_BUFGP         |   0.000|
-DIVISOR<31> |    8.878(R)|   -0.160(R)|CLK_BUFGP         |   0.000|
-LOAD        |    9.064(R)|   -0.718(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<0> |    3.078(R)|   -1.434(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<1> |    0.971(R)|    0.289(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<2> |    0.729(R)|    0.486(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<3> |    1.022(R)|    0.251(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<4> |    2.403(R)|   -0.857(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<5> |    1.030(R)|    0.260(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<6> |   -0.085(R)|    1.176(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<7> |    0.143(R)|    0.993(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<8> |   -0.066(R)|    1.154(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<9> |    0.417(R)|    0.758(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<10>|    1.577(R)|   -0.148(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<11>|    0.744(R)|    0.450(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<12>|    0.612(R)|    0.571(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<13>|    0.045(R)|    1.024(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<14>|    1.560(R)|   -0.188(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<15>|    0.824(R)|    0.442(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<16>|    1.525(R)|   -0.180(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<17>|    1.437(R)|   -0.118(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<18>|    1.452(R)|   -0.130(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<19>|    0.813(R)|    0.393(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<20>|    0.487(R)|    0.667(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<21>|    0.348(R)|    0.778(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<22>|   -0.102(R)|    1.173(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<23>|    0.100(R)|    1.017(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<24>|    0.555(R)|    0.606(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<25>|    0.070(R)|    0.994(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<26>|    0.240(R)|    0.853(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<27>|    0.259(R)|    0.830(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<28>|    1.345(R)|   -0.033(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<29>|    0.985(R)|    0.230(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<30>|    1.544(R)|   -0.215(R)|CLK_BUFGP         |   0.000|
+DIVIDEND<31>|    1.619(R)|   -0.230(R)|CLK_BUFGP         |   0.000|
+DIVISOR<0>  |    0.705(R)|    0.451(R)|CLK_BUFGP         |   0.000|
+DIVISOR<1>  |    0.870(R)|    0.314(R)|CLK_BUFGP         |   0.000|
+DIVISOR<2>  |    1.590(R)|   -0.283(R)|CLK_BUFGP         |   0.000|
+DIVISOR<3>  |    0.790(R)|    0.387(R)|CLK_BUFGP         |   0.000|
+DIVISOR<4>  |    2.141(R)|   -0.709(R)|CLK_BUFGP         |   0.000|
+DIVISOR<5>  |    1.654(R)|   -0.336(R)|CLK_BUFGP         |   0.000|
+DIVISOR<6>  |    2.510(R)|   -1.001(R)|CLK_BUFGP         |   0.000|
+DIVISOR<7>  |    1.797(R)|   -0.439(R)|CLK_BUFGP         |   0.000|
+DIVISOR<8>  |    1.359(R)|   -0.063(R)|CLK_BUFGP         |   0.000|
+DIVISOR<9>  |    2.398(R)|   -0.919(R)|CLK_BUFGP         |   0.000|
+DIVISOR<10> |    1.787(R)|   -0.431(R)|CLK_BUFGP         |   0.000|
+DIVISOR<11> |    2.668(R)|   -1.140(R)|CLK_BUFGP         |   0.000|
+DIVISOR<12> |    2.643(R)|   -1.116(R)|CLK_BUFGP         |   0.000|
+DIVISOR<13> |    1.850(R)|   -0.481(R)|CLK_BUFGP         |   0.000|
+DIVISOR<14> |    0.816(R)|    0.355(R)|CLK_BUFGP         |   0.000|
+DIVISOR<15> |    1.304(R)|   -0.048(R)|CLK_BUFGP         |   0.000|
+DIVISOR<16> |    1.682(R)|   -0.343(R)|CLK_BUFGP         |   0.000|
+DIVISOR<17> |    2.381(R)|   -0.906(R)|CLK_BUFGP         |   0.000|
+DIVISOR<18> |    1.563(R)|   -0.252(R)|CLK_BUFGP         |   0.000|
+DIVISOR<19> |    1.569(R)|   -0.252(R)|CLK_BUFGP         |   0.000|
+DIVISOR<20> |    1.541(R)|   -0.225(R)|CLK_BUFGP         |   0.000|
+DIVISOR<21> |    1.781(R)|   -0.410(R)|CLK_BUFGP         |   0.000|
+DIVISOR<22> |    1.831(R)|   -0.457(R)|CLK_BUFGP         |   0.000|
+DIVISOR<23> |    1.557(R)|   -0.238(R)|CLK_BUFGP         |   0.000|
+DIVISOR<24> |    2.007(R)|   -0.603(R)|CLK_BUFGP         |   0.000|
+DIVISOR<25> |    1.952(R)|   -0.554(R)|CLK_BUFGP         |   0.000|
+DIVISOR<26> |    2.011(R)|   -0.598(R)|CLK_BUFGP         |   0.000|
+DIVISOR<27> |    1.935(R)|   -0.537(R)|CLK_BUFGP         |   0.000|
+DIVISOR<28> |    1.227(R)|    0.017(R)|CLK_BUFGP         |   0.000|
+DIVISOR<29> |    1.643(R)|   -0.306(R)|CLK_BUFGP         |   0.000|
+DIVISOR<30> |    1.738(R)|   -0.376(R)|CLK_BUFGP         |   0.000|
+DIVISOR<31> |    2.605(R)|   -1.091(R)|CLK_BUFGP         |   0.000|
+LOAD        |    7.862(R)|   -0.238(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -117,71 +117,72 @@ Clock CLK to Pad
              | clk (edge) |                  | Clock  |
 Destination  |   to PAD   |Internal Clock(s) | Phase  |
 -------------+------------+------------------+--------+
-EOC          |   10.565(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<0>  |    9.863(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<1>  |    9.247(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<2>  |    7.629(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<3>  |    8.527(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<4>  |    7.606(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<5>  |    7.635(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<6>  |    8.626(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<7>  |    8.795(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<8>  |    8.661(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<9>  |    9.144(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<10> |    8.588(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<11> |    7.929(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<12> |    8.739(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<13> |    8.399(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<14> |    9.071(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<15> |    8.422(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<16> |   10.144(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<17> |    9.045(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<18> |    8.690(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<19> |    8.681(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<20> |    8.917(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<21> |    7.933(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<22> |    8.245(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<23> |    9.353(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<24> |    8.637(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<25> |    8.242(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<26> |    8.865(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<27> |    9.358(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<28> |    8.384(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<29> |    9.376(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<30> |    8.116(R)|CLK_BUFGP         |   0.000|
-QUOTIENT<31> |   10.362(R)|CLK_BUFGP         |   0.000|
-REMAINDER<0> |    9.176(R)|CLK_BUFGP         |   0.000|
-REMAINDER<1> |    8.607(R)|CLK_BUFGP         |   0.000|
-REMAINDER<2> |    9.565(R)|CLK_BUFGP         |   0.000|
-REMAINDER<3> |    8.569(R)|CLK_BUFGP         |   0.000|
-REMAINDER<4> |   10.125(R)|CLK_BUFGP         |   0.000|
-REMAINDER<5> |    9.149(R)|CLK_BUFGP         |   0.000|
-REMAINDER<6> |    9.562(R)|CLK_BUFGP         |   0.000|
-REMAINDER<7> |    9.408(R)|CLK_BUFGP         |   0.000|
-REMAINDER<8> |    9.182(R)|CLK_BUFGP         |   0.000|
-REMAINDER<9> |    8.811(R)|CLK_BUFGP         |   0.000|
-REMAINDER<10>|    9.011(R)|CLK_BUFGP         |   0.000|
-REMAINDER<11>|    8.885(R)|CLK_BUFGP         |   0.000|
-REMAINDER<12>|   10.142(R)|CLK_BUFGP         |   0.000|
-REMAINDER<13>|    9.447(R)|CLK_BUFGP         |   0.000|
-REMAINDER<14>|    8.987(R)|CLK_BUFGP         |   0.000|
-REMAINDER<15>|    8.979(R)|CLK_BUFGP         |   0.000|
-REMAINDER<16>|    9.236(R)|CLK_BUFGP         |   0.000|
-REMAINDER<17>|    9.566(R)|CLK_BUFGP         |   0.000|
-REMAINDER<18>|    8.829(R)|CLK_BUFGP         |   0.000|
-REMAINDER<19>|    9.373(R)|CLK_BUFGP         |   0.000|
-REMAINDER<20>|    9.564(R)|CLK_BUFGP         |   0.000|
-REMAINDER<21>|    8.769(R)|CLK_BUFGP         |   0.000|
-REMAINDER<22>|    8.819(R)|CLK_BUFGP         |   0.000|
-REMAINDER<23>|    8.451(R)|CLK_BUFGP         |   0.000|
-REMAINDER<24>|    9.539(R)|CLK_BUFGP         |   0.000|
-REMAINDER<25>|    8.489(R)|CLK_BUFGP         |   0.000|
-REMAINDER<26>|    9.116(R)|CLK_BUFGP         |   0.000|
-REMAINDER<27>|    8.248(R)|CLK_BUFGP         |   0.000|
-REMAINDER<28>|    9.579(R)|CLK_BUFGP         |   0.000|
-REMAINDER<29>|    8.418(R)|CLK_BUFGP         |   0.000|
-REMAINDER<30>|    8.628(R)|CLK_BUFGP         |   0.000|
-REMAINDER<31>|    8.317(R)|CLK_BUFGP         |   0.000|
+EOC          |    8.706(R)|CLK_BUFGP         |   0.000|
+ERROR        |   14.102(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<0>  |   14.868(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<1>  |   10.160(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<2>  |   10.177(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<3>  |    9.845(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<4>  |   11.174(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<5>  |    9.311(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<6>  |    9.653(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<7>  |    9.813(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<8>  |    9.767(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<9>  |   10.699(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<10> |    9.430(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<11> |    9.322(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<12> |    9.324(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<13> |    8.133(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<14> |   10.308(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<15> |    9.472(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<16> |   10.580(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<17> |    7.962(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<18> |    8.297(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<19> |    8.876(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<20> |    8.144(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<21> |    8.299(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<22> |    8.388(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<23> |    8.264(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<24> |    7.388(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<25> |    8.119(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<26> |    8.028(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<27> |    9.094(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<28> |    8.599(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<29> |    8.535(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<30> |    8.866(R)|CLK_BUFGP         |   0.000|
+QUOTIENT<31> |    9.467(R)|CLK_BUFGP         |   0.000|
+REMAINDER<0> |    9.021(R)|CLK_BUFGP         |   0.000|
+REMAINDER<1> |    9.822(R)|CLK_BUFGP         |   0.000|
+REMAINDER<2> |    9.193(R)|CLK_BUFGP         |   0.000|
+REMAINDER<3> |   10.479(R)|CLK_BUFGP         |   0.000|
+REMAINDER<4> |    8.741(R)|CLK_BUFGP         |   0.000|
+REMAINDER<5> |    9.660(R)|CLK_BUFGP         |   0.000|
+REMAINDER<6> |   10.399(R)|CLK_BUFGP         |   0.000|
+REMAINDER<7> |    9.134(R)|CLK_BUFGP         |   0.000|
+REMAINDER<8> |   10.752(R)|CLK_BUFGP         |   0.000|
+REMAINDER<9> |    9.061(R)|CLK_BUFGP         |   0.000|
+REMAINDER<10>|    9.056(R)|CLK_BUFGP         |   0.000|
+REMAINDER<11>|    9.606(R)|CLK_BUFGP         |   0.000|
+REMAINDER<12>|    9.069(R)|CLK_BUFGP         |   0.000|
+REMAINDER<13>|    9.080(R)|CLK_BUFGP         |   0.000|
+REMAINDER<14>|    8.814(R)|CLK_BUFGP         |   0.000|
+REMAINDER<15>|   10.288(R)|CLK_BUFGP         |   0.000|
+REMAINDER<16>|    9.103(R)|CLK_BUFGP         |   0.000|
+REMAINDER<17>|    9.156(R)|CLK_BUFGP         |   0.000|
+REMAINDER<18>|    8.875(R)|CLK_BUFGP         |   0.000|
+REMAINDER<19>|    9.022(R)|CLK_BUFGP         |   0.000|
+REMAINDER<20>|   10.378(R)|CLK_BUFGP         |   0.000|
+REMAINDER<21>|    9.993(R)|CLK_BUFGP         |   0.000|
+REMAINDER<22>|    8.823(R)|CLK_BUFGP         |   0.000|
+REMAINDER<23>|    8.971(R)|CLK_BUFGP         |   0.000|
+REMAINDER<24>|    9.003(R)|CLK_BUFGP         |   0.000|
+REMAINDER<25>|   10.370(R)|CLK_BUFGP         |   0.000|
+REMAINDER<26>|   10.086(R)|CLK_BUFGP         |   0.000|
+REMAINDER<27>|    9.325(R)|CLK_BUFGP         |   0.000|
+REMAINDER<28>|   11.422(R)|CLK_BUFGP         |   0.000|
+REMAINDER<29>|   10.346(R)|CLK_BUFGP         |   0.000|
+REMAINDER<30>|    8.452(R)|CLK_BUFGP         |   0.000|
+REMAINDER<31>|    8.450(R)|CLK_BUFGP         |   0.000|
 -------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -189,56 +190,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    9.728|         |         |         |
+CLK            |   10.425|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-DIVISOR<0>     |ERROR          |   11.083|
-DIVISOR<1>     |ERROR          |   10.491|
-DIVISOR<2>     |ERROR          |   10.330|
-DIVISOR<3>     |ERROR          |    9.291|
-DIVISOR<4>     |ERROR          |    8.938|
-DIVISOR<5>     |ERROR          |    8.781|
-DIVISOR<6>     |ERROR          |    9.094|
-DIVISOR<7>     |ERROR          |    9.233|
-DIVISOR<8>     |ERROR          |    9.653|
-DIVISOR<9>     |ERROR          |    9.943|
-DIVISOR<10>    |ERROR          |    9.827|
-DIVISOR<11>    |ERROR          |    9.276|
-DIVISOR<12>    |ERROR          |    9.599|
-DIVISOR<13>    |ERROR          |   10.314|
-DIVISOR<14>    |ERROR          |    9.385|
-DIVISOR<15>    |ERROR          |    9.589|
-DIVISOR<16>    |ERROR          |   10.296|
-DIVISOR<17>    |ERROR          |    9.115|
-DIVISOR<18>    |ERROR          |    9.319|
-DIVISOR<19>    |ERROR          |   10.564|
-DIVISOR<20>    |ERROR          |   10.222|
-DIVISOR<21>    |ERROR          |    9.946|
-DIVISOR<22>    |ERROR          |   10.372|
-DIVISOR<23>    |ERROR          |   10.089|
-DIVISOR<24>    |ERROR          |    9.428|
-DIVISOR<25>    |ERROR          |   10.201|
-DIVISOR<26>    |ERROR          |    9.469|
-DIVISOR<27>    |ERROR          |    9.325|
-DIVISOR<28>    |ERROR          |    9.373|
-DIVISOR<29>    |ERROR          |    9.197|
-DIVISOR<30>    |ERROR          |    9.444|
-DIVISOR<31>    |ERROR          |    9.499|
----------------+---------------+---------+
 
-
-Analysis completed Mon May 03 19:32:07 2021 
+Analysis completed Sat May 08 17:52:17 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4488 MB
+Peak Memory Usage: 4518 MB
 
 
 
